@@ -1,0 +1,65 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  objetivo: MyString
+  amostra: MyString
+  equipamento: MyString
+  material: MyString
+  calibracao: MyString
+  controleQualidade: MyString
+  aplicabilidade: MyString
+  descricao: MyString
+  calculos: MyString
+  resultados: MyString
+  comentarios: MyString
+  responsabilidade: MyString
+  autoridade: MyString
+  normasSeguranca: MyString
+  treinamento: MyString
+  documentosRelacionados: MyString
+  referenciasNormativas: MyString
+  fluxograma: MyString
+  controleRegistro: MyString
+  anexos: MyString
+  elaborado1: MyString
+  elaborado2: MyString
+  revisado: MyString
+  formatado: MyString
+  validado1: MyString
+  validado2: MyString
+  aprovado: MyString
+  dataAprovacao: MyString
+  dataImplementacao: MyString
+
+two:
+  titulo: MyString
+  objetivo: MyString
+  amostra: MyString
+  equipamento: MyString
+  material: MyString
+  calibracao: MyString
+  controleQualidade: MyString
+  aplicabilidade: MyString
+  descricao: MyString
+  calculos: MyString
+  resultados: MyString
+  comentarios: MyString
+  responsabilidade: MyString
+  autoridade: MyString
+  normasSeguranca: MyString
+  treinamento: MyString
+  documentosRelacionados: MyString
+  referenciasNormativas: MyString
+  fluxograma: MyString
+  controleRegistro: MyString
+  anexos: MyString
+  elaborado1: MyString
+  elaborado2: MyString
+  revisado: MyString
+  formatado: MyString
+  validado1: MyString
+  validado2: MyString
+  aprovado: MyString
+  dataAprovacao: MyString
+  dataImplementacao: MyString

@@ -1,0 +1,277 @@
+.navbar {
+    min-height: 100px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+  }
+
+footer {
+  background-color: #61a9da
+  }
+
+  /* CSS BOTÕES */
+  .button { /* botões */
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #61a9da;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #516da0;
+  }
+  
+  .button:hover { /* mudança de cor quando coloca o cursor sobre o botão */
+    background-color: #3268cc
+  } 
+  
+  .button:active {
+    background-color: #2864d3;
+    box-shadow: 0 5px #516da0;
+    transform: translateY(4px);
+  }
+
+  /* CSS DA TABELA */
+  table { /* tabela */
+    border-collapse: collapse;
+    width: 98%;
+    margin-left: 15px;
+  }
+
+  table, td, th { /* tabela */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: 1px solid #0b3480;
+  height: 35px;
+  vertical-align: center;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  }
+
+  tr:hover {background-color: #d4dadf} /* mudança de cor quando coloca o cursor sobre a linha */
+
+  th { /* cabeçalho da tabela */
+    background-color: #4265a7;
+    color: white;
+    height: 15px;
+    text-align: center;
+}
+
+/* CSS BORDAS */
+p.one {
+  border-style: solid;
+  border-color: red;
+}
+
+/* borda menu principal */
+p.groove {
+  margin-left: 84px;
+  width: 85%;
+  height: 39px;
+  border-style: groove; 
+  padding: 15px;
+  vertical-align: center;
+}
+
+/* borda fomulario de cadastro de usuarios */
+p.borda {
+  margin-left: 77px;
+  width: 86%;
+  height: 330px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* borda formulario de cadastro de senha de usuario */
+p.borda1 {
+  margin-left: 77px;
+  width: 86%;
+  height: 155px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* borda formulario de cadastro de POP */
+p.borda2 {
+  margin-left: 77px;
+  width: 86%;
+  height: 6050px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* borda formulario de cadastro de POP */
+p.borda3 {
+  margin-left: 77px;
+  width: 86%;
+  height: 680px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p.borda4 {
+  margin-left: 77px;
+  width: 86%;
+  height: 180px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* borda do nome do usuário página*/
+p.borda5{
+  border: 1px solid black;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+}
+
+/* campo de texto do formulario */
+textarea {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #ecf2f5;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  resize: none;
+}
+
+div.strong{
+  font-size: 18px;
+  font-family: cambria; 
+  color: #000000;
+  padding: 3px;
+
+}
+
+div.strong2{
+  font-size: 18px;
+  font-family: cambria; 
+  color: #000000;
+  padding: 3px;
+  margin-left: 77px;
+}
+
+/* posição dos botões MENU PRINCIPAL e CRIAR NOVO USUÁRIO da página USUÁRIOS CADASTRADOS e página LISTA DE POP*/
+div.strong3{ 
+  font-size: 18px;
+  font-family: cambria;
+  margin-left: 15px;
+  margin-bottom: 2px;
+}
+
+/* CSS visualizar POP*/
+div.strong4{
+  margin-top: 2px;
+  margin-left: 77px;
+  width: 86%;
+  height: 2000px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* CSS visualizar usuário */
+div.strong5{
+  margin-top: 12px;
+  margin-left: 77px;
+  width: 86%;
+  height: 335px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* div botoes voltar e editar da pagina visualizar pop */
+div.position{
+  margin-top: 1px;
+  margin-left: 77px;
+  margin-bottom: 10px;
+}
+
+/* div botoes da pagina visualizar usuario */
+div.position3{
+  margin-top: 8px;
+  margin-left: 77px;
+}
+
+/* posição da imagem de usuario */
+div.position4{
+  margin-left: 1100px;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+/* Footer */
+.footer-basic {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 5px 0;
+  color: #000000;
+  margin-top: 250px;
+  margin-left: 0px;
+  width: 102%;
+  height: 100px;
+}
+
+.footer-basic ul {
+  padding: 20px;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding:0px 0px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+  font-size: 19px;
+  color: #2864d3;
+}
+
+.footer-basic .copyright {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 0px;
+  opacity: 1;
+}
+
+

@@ -1,0 +1,49 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p class="borda">
+    <%= form.label :"Nome Completo:", style: "display: block" %>
+    <%= form.text_area :name, :cols => 80, :rows => 1 %><br>
+
+    <%= form.label :"Setor:", style: "display: block" %>
+    <%= form.text_area :sector, :cols => 45, :rows => 1 %><br>
+
+    <%= form.label :"E-mail:", style: "display: block" %>
+    <%= form.text_area :email, :cols => 45, :rows => 1 %><br>
+
+    <%= form.label :"Endereço:", style: "display: block" %>
+    <%= form.text_area :adress, :cols => 45, :rows => 1 %><br>
+
+    <%= form.label :"Cidade:", style: "display: block" %>
+    <%= form.text_area :city, :cols => 45, :rows => 1 %><br>
+
+    <%= form.label :"Estado:", style: "display: block" %>
+    <%= form.select :state, ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'] %><br>
+  </p>
+
+  <p class="borda1">
+    <%= form.label :"Cadastre uma senha!!!", style: "display: block" %><br>
+
+    <%= form.label :"Informe a Senha:", style: "display: block" %>
+    <%= form.text_area :password, :cols => 45, :rows => 1 %><br>
+
+    <%= form.label :"Confirme a senha:", style: "display: block" %>
+    <%= form.text_area :passwordConfirm, :cols => 45, :rows => 1 %><br><br><br>
+  </p>
+
+  <div class="strong2">
+    <%= form.submit 'SALVAR', :class => "button" %>
+    <%= link_to "CANCELAR", inicial_path, :class => "button" %>
+  </div>
+  <br>
+<% end %>

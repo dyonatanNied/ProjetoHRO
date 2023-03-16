@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p> <! mensagem de sucesso quando salva o pop> 
+
+<div class="row-fluid">
+  <div class="span4" style="padding: 1%; background-color: #ffffff;">
+    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>Usuários Cadastrados</big></p></b>
+  </div>
+</div>
+
+<div class="strong3">
+  <%= link_to "MENU PRINCIPAL", inicial_path, :class => "button" %>
+  <%= link_to "CRIAR NOVO USUÁRIO", new_user_path, :class => "button" %><br><br>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>NOME</th>
+      <th>SETOR</th>
+      <th>CIDADE</th>
+      <th>ESTADO</th>
+      <th>OPÇÕES</th>
+    </tr>
+  </thead>
+  <div id="users">
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.sector %></td>
+          <td><%= user.city %></td>
+          <td><%= user.state %></td>
+          <td><%= link_to "VISUALIZAR USUÁRIO", user, :class => "button" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </div>
+</table>

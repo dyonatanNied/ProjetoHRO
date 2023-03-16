@@ -1,0 +1,117 @@
+<%= form_with(model: pop) do |form| %>
+  <% if pop.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pop.errors.count, "error") %> prohibited this pop from being saved:</h2>
+
+      <ul>
+        <% pop.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p class="borda2">
+    <%= link_to "INSTRUÇÕES", instructions_path, :class => "button", style: "position: relative; left: 4px;" %>
+    <b><%= form.label :"*Preencha as informações abaixo conforme definido pelo modelo padrão!", style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
+  
+    <br><br><br><br>
+
+    <b><%= form.label :"Título:", style: "display: block" %></b>
+    <%= form.text_area :titulo, :cols => 158, :rows => 1 %><br>
+
+    <b><%= form.label :"Objetivo:", style: "display: block" %></b>
+    <%= form.text_area :objetivo, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Amostra:", style: "display: block" %></b>
+    <%= form.text_area :amostra, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Equipamento:", style: "display: block" %></b>
+    <%= form.text_area :equipamento, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Material:", style: "display: block" %></b>
+    <%= form.text_area :material, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Calibração:", style: "display: block" %></b>
+    <%= form.text_area :calibracao, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Controle de Qualidade:", style: "display: block" %></b>
+    <%= form.text_area :controleQualidade, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Aplicabilidade:", style: "display: block" %></b>
+    <%= form.text_area :aplicabilidade, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Descrição:", style: "display: block" %></b>
+    <%= form.text_area :descricao, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Cálculos:", style: "display: block" %></b>
+    <%= form.text_area :calculos, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Resultados:", style: "display: block" %></b>
+    <%= form.text_area :resultados, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Comentários:", style: "display: block" %></b>
+    <%= form.text_area :comentarios, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Responsabilidade:", style: "display: block" %></b>
+    <%= form.text_area :responsabilidade, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Autoridade:", style: "display: block" %></b>
+    <%= form.text_area :autoridade, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Normas de Seguranca:", style: "display: block" %></b>
+    <%= form.text_area :normasSeguranca, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Treinamento:", style: "display: block" %></b>
+    <%= form.text_area :treinamento, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Documentos Relacionados:", style: "display: block" %></b>
+    <%= form.text_area :documentosRelacionados, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Referências Normativas:", style: "display: block" %></b>
+    <%= form.text_area :referenciasNormativas, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Fluxograma:", style: "display: block" %></b>
+    <%= form.text_area :fluxograma, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Controle de Registro:", style: "display: block" %></b>
+    <%= form.text_area :controleRegistro, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Anexos:", style: "display: block" %></b>
+    <%= form.text_area :anexos, :cols => 158, :rows => 15 %>
+  </p>
+
+  <p class="borda3">
+    <b><%= form.label :"Elaborado por:", style: "display: block" %></b>
+    <%= form.text_area :elaborado1, :cols => 80, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Elaborado por:", style: "display: block" %></b>
+    <%= form.text_area :elaborado2, :cols => 80, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Revisado por:", style: "display: block" %></b>
+    <%= form.text_area :revisado, :cols => 80, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Formatado por:", style: "display: block" %></b>
+    <%= form.text_area :formatado, :cols => 80, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Validado por:", style: "display: block" %></b>
+    <%= form.text_area :validado1, :cols => 80, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Validado por:", style: "display: block" %></b>
+    <%= form.text_area :validado2, :cols => 80, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Aprovado por:", style: "display: block" %></b>
+    <%= form.text_area :aprovado, :cols => 80, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Data de Aprovação:", style: "display: block" %></b>
+    <%= form.text_area :dataAprovacao, :cols => 9, :rows => 1 %><br><br>
+
+    <b><%= form.label :"Data de Implementação:", style: "display: block" %></b>
+    <%= form.text_area :dataImplementacao, :cols => 9, :rows => 1 %>
+  </p>
+
+  <div class="strong2">
+    <%= form.submit 'SALVAR', :class => "button" %>
+    <%= link_to "CANCELAR", inicial_path, :class => "button" %>
+  </div>
+<% end %>

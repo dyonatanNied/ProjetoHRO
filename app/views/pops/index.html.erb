@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %> <! mensagem de sucesso quando salva o pop> 
+
+<div class="row-fluid">
+  <div class="span4" style="padding: 1%; background-color: #ffffff;">
+    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>PROCEDIMENTOS OPERACIONAIS PADRÕES CADASTRADOS</big></p></b>
+  </div>
+</div>
+
+<div class="strong3">
+  <%= link_to "MENU PRINCIPAL", inicial_path, :class => "button" %><br><br><br>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>NÚMERO DO PROCEDIMENTO OPERACIONAL PADRÃO - POP</th>
+      <th>OPÇÕES</th>
+    </tr>
+  </thead>
+  <div id="pops">
+    <tbody>
+      <% @pops.each do |pop| %>
+        <tr>
+          <td><%= pop.titulo %></td>
+          <td><%= link_to "VISUALIZAR POP", pop, :class => "button" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </div>
+</table>
