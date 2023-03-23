@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "button", "user" %>
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div style="color: red">
@@ -11,7 +12,8 @@
     </div>
   <% end %>
 
-  <p class="borda">
+  <p class="campo3">
+
     <%= form.label :"Nome Completo:", style: "display: block" %>
     <%= form.text_area :name, :cols => 80, :rows => 1 %><br>
 
@@ -29,9 +31,14 @@
 
     <%= form.label :"Estado:", style: "display: block" %>
     <%= form.select :state, ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'] %><br>
+    <br>
+    <%= form.label :"Imagem de Perfil", style: "display: block" %>
+    <%= form.file_field :image %>
+  
   </p>
 
-  <p class="borda1">
+
+  <p class="campo4">
     <%= form.label :"Cadastre uma senha!!!", style: "display: block" %><br>
 
     <%= form.label :"Informe a Senha:", style: "display: block" %>

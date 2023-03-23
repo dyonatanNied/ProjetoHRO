@@ -1,0 +1,80 @@
+/* primeiro campo do cadastro de usuário referentes ao dados pessoais */
+p.campo3 {
+    margin-left: 77px;
+    width: 86%;
+    height: 390px;
+    border-style: groove; 
+    padding: 25px;
+    vertical-align: center;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /* segundo campo do cadastro de usuários referente ao cadastro de senhas */
+  p.campo4 {
+    margin-left: 77px;
+    width: 86%;
+    height: 155px;
+    border-style: groove; 
+    padding: 25px;
+    vertical-align: center;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  
+/* campo de texto do formulário */
+textarea {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #ecf2f5;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  resize: none;
+}
+
+/* posição dos botões MENU PRINCIPAL e CRIAR NOVO USUÁRIO da página USUÁRIOS CADASTRADOS */
+div.strong3{ 
+  font-size: 18px;
+  font-family: cambria;
+  margin-left: 15px;
+  margin-bottom: 2px;
+}
+
+/* visualizar usuário */
+div.strong5{
+  margin-top: 12px;
+  margin-left: 77px;
+  width: 86%;
+  height: 420px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* imagem usuário */
+div.position2{
+  margin-left: 10px;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+/* botõess da página visualizar usuário */
+div.position3{
+  margin-top: 8px;
+  margin-left: 77px;
+}
+
+/* botões salvar e cancelar */
+div.strong2{
+  font-size: 18px;
+  font-family: cambria; 
+  color: #000000;
+  padding: 3px;
+  margin-left: 77px;
+}

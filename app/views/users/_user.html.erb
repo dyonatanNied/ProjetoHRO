@@ -1,31 +1,34 @@
 <div id="<%= dom_id user %>">
+
   <p>
-    <strong>Name:</strong>
+    <strong>Nome Completo:</strong>
     <%= user.name %>
   </p>
 
+  <div class="position2">
+    <div>
+      <%= image_tag(@user.image_url.to_s, :style => "width: 100px; height: 100px;") %>
+    </div>
+  </div>
+
   <p>
-    <strong>Email:</strong>
+    <strong>E-mail:</strong>
     <%= user.email %>
   </p>
 
   <p>
-    <strong>Adress:</strong>
+    <strong>Endereço:</strong>
     <%= user.adress %>
-  </p>
-
-  <p>
-    <strong>City:</strong>
+ 
+    <strong>Cidade:</strong>
     <%= user.city %>
-  </p>
 
-  <p>
-    <strong>State:</strong>
+    <strong>Estado:</strong>
     <%= user.state %>
   </p>
 
   <p>
-    <strong>Sector:</strong>
+    <strong>Setor:</strong>
     <%= user.sector %>
   </p>
 
@@ -38,5 +41,5 @@
     <strong>Passwordconfirm:</strong>
     <%= user.passwordConfirm %>
   </p>
-
+  
 </div>

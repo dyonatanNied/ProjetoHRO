@@ -1,0 +1,25 @@
+/* CSS DA TABELA */
+table { /* tabela */
+    border-collapse: collapse;
+    width: 98%;
+    margin-left: 15px;
+  }
+
+  table, td, th { /* tabela */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: 1px solid #0b3480;
+  height: 35px;
+  vertical-align: center;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  }
+
+  tr:hover {background-color: #d4dadf} /* mudança de cor quando coloca o cursor sobre a linha */
+
+  th { /* cabeçalho da tabela */
+    background-color: #4265a7;
+    color: white;
+    height: 15px;
+    text-align: center;
+}

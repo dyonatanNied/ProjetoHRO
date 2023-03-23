@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_09_170957) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_22_173143) do
   create_table "forms", force: :cascade do |t|
     t.string "titulo"
     t.string "objetivo"
@@ -72,6 +72,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_170957) do
     t.string "dataImplementacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "imagemequip"
   end
 
   create_table "users", force: :cascade do |t|
@@ -85,6 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_170957) do
     t.string "passwordConfirm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
   end
 
 end

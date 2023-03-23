@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "button", "pop" %>
 <%= form_with(model: pop) do |form| %>
   <% if pop.errors.any? %>
     <div style="color: red">
@@ -11,7 +12,7 @@
     </div>
   <% end %>
 
-  <p class="borda2">
+  <p class="campo1">
     <%= link_to "INSTRUÇÕES", instructions_path, :class => "button", style: "position: relative; left: 4px;" %>
     <b><%= form.label :"*Preencha as informações abaixo conforme definido pelo modelo padrão!", style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
   
@@ -28,6 +29,9 @@
 
     <b><%= form.label :"Equipamento:", style: "display: block" %></b>
     <%= form.text_area :equipamento, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Imagem de Equipamento", style: "display: block" %></b>
+    <%= form.file_field :imagemequip, multiple: true %>
 
     <b><%= form.label :"Material:", style: "display: block" %></b>
     <%= form.text_area :material, :cols => 158, :rows => 15 %>
@@ -81,7 +85,7 @@
     <%= form.text_area :anexos, :cols => 158, :rows => 15 %>
   </p>
 
-  <p class="borda3">
+  <p class="campo2">
     <b><%= form.label :"Elaborado por:", style: "display: block" %></b>
     <%= form.text_area :elaborado1, :cols => 80, :rows => 1 %><br><br>
 

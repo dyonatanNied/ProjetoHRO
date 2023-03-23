@@ -1,0 +1,26 @@
+  /* CSS BOTÕES */
+  .button { /* botões */
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #61a9da;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #516da0;
+  }
+  
+  .button:hover { /* mudança de cor quando coloca o cursor sobre o botão */
+    background-color: #3268cc
+  } 
+  
+  .button:active {
+    background-color: #2864d3;
+    box-shadow: 0 5px #516da0;
+    transform: translateY(4px);
+  }

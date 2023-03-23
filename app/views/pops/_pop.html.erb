@@ -17,6 +17,11 @@
   <p>
     <strong>Equipamento:</strong>
     <%= pop.equipamento %>
+  </p> 
+
+  <p>
+    <strong>Imagem equipamento:</strong>
+    <%= image_tag(@pop.imagemequip_url.to_s) %>
   </p>
 
   <p>
@@ -55,7 +60,7 @@
   </p>
 
   <p>
-    <strong>Comentarios:</strong>
+    <strong>Comentários:</strong>
     <%= pop.comentarios %>
   </p>
 
