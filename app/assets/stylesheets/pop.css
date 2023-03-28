@@ -2,7 +2,7 @@
 p.campo1 {
     margin-left: 77px;
     width: 86%;
-    height: 6050px;
+    height: 6500px;
     border-style: groove; 
     padding: 25px;
     vertical-align: center;
@@ -15,7 +15,7 @@ p.campo1 {
 p.campo2 {
   margin-left: 77px;
   width: 86%;
-  height: 680px;
+  height: 620px;
   border-style: groove; 
   padding: 25px;
   vertical-align: center;
@@ -29,6 +29,8 @@ textarea {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 4px;
+  margin-top: 2px;
   background-color: #ecf2f5;
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -65,7 +67,7 @@ div.position{
 
 /* posição botão deletar */ 
 div.position3{
-  margin-top: 8px;
+  margin-top: 10px;
   margin-left: 77px;
 }
 

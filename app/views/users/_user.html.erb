@@ -12,24 +12,37 @@
   </div>
 
   <p>
+    <strong>Coren/SC:</strong>
+    <%= user.coren %>
+  </p>
+
+  <p>
+    <strong>Setor:</strong>
+    <%= user.sector %>
+  </p>
+
+  <p>
+    <strong>Telefone:</strong>
+    <%= user.phone %>
+  </p>
+
+  <p>
     <strong>E-mail:</strong>
     <%= user.email %>
   </p>
 
   <p>
     <strong>Endereço:</strong>
-    <%= user.adress %>
+    Rua <%= user.street %>
+
+    - <strong>Complemento:</strong>
+    <%= user.address_complement %>
  
-    <strong>Cidade:</strong>
+    - <strong>Cidade:</strong>
     <%= user.city %>
 
-    <strong>Estado:</strong>
+    - <strong>Estado:</strong>
     <%= user.state %>
-  </p>
-
-  <p>
-    <strong>Setor:</strong>
-    <%= user.sector %>
   </p>
 
   <p>

@@ -1,0 +1,36 @@
+/* visualizar pop - campo de assinaturas*/
+div.campo_text{
+    margin-top: 0;
+    margin-left: 77px;
+    width: 86%;
+    height: auto;
+    border-style: groove; 
+    padding: 12px;
+    vertical-align: center;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  div.campo_title{
+    margin-top: 0;
+    margin-left: 77px;
+    width: 86%;
+    height: auto;
+    border-style: groove; 
+    padding: 12px;
+    vertical-align: center;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  div.campo_img{
+    margin-top: 0;
+    margin-left: 77px;
+    width: 86%;
+    height: auto;
+    border-style: groove; 
+    padding: 12px;
+    vertical-align: center;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }

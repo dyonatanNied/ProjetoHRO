@@ -31,7 +31,8 @@ class CreatePops < ActiveRecord::Migration[7.0]
       t.string :aprovado
       t.string :dataAprovacao
       t.string :dataImplementacao
-
+      t.string :imagemequip
+      t.string :imagemflowchar
       t.timestamps
     end
   end

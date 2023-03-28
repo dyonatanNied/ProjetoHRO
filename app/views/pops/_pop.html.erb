@@ -1,157 +1,175 @@
+<%= stylesheet_link_tag "button", "pop", "table_signature", "show_pop" %>
 <div id="<%= dom_id pop %>">
-  <p>
-    <strong>Titulo:</strong>
-    <%= pop.titulo %>
-  </p>
+<br>
+<div class="campo_title">
+  <th><b>Título:</b></th>
+  <td><%= pop.titulo %></td>
+</div>
 
-  <p>
-    <strong>Objetivo:</strong>
-    <%= pop.objetivo %>
-  </p>
+<div class="campo_title">
+  <th><b>Número do POP:</b></th>
+  <td><%= pop.pop_number %></td>
+</div>
 
-  <p>
-    <strong>Amostra:</strong>
-    <%= pop.amostra %>
-  </p>
+<div class="campo_title">
+  <th><b>Setor do POP:</b></th>
+  <td><%= pop.pop_sector %></td>
+</div>
 
-  <p>
-    <strong>Equipamento:</strong>
-    <%= pop.equipamento %>
-  </p> 
+<div class="campo_text">
+  <th><b>Objetivo:</b></th>
+  <td><%= pop.objetivo %></td>
+</div>
 
-  <p>
-    <strong>Imagem equipamento:</strong>
-    <%= image_tag(@pop.imagemequip_url.to_s) %>
-  </p>
+<div class="campo_text">
+  <th><b>Amostra:</b></th>
+  <td><%= pop.amostra %></td>
+</div>
 
-  <p>
-    <strong>Material:</strong>
-    <%= pop.material %>
-  </p>
+<div class="campo_text">
+  <th><b>Equipamento:</b></th>
+  <td><%= pop.equipamento %></td>
+</div>
 
-  <p>
-    <strong>Calibracao:</strong>
-    <%= pop.calibracao %>
-  </p>
+<div class="campo_img">
+  <th><b>Imagem do Equipamento:</b></th><br>
+  <td><%= image_tag(@pop.imageEquipment_url.to_s, :style => "width: 300px; height: 300px;") %></td>
+</div>
 
-  <p>
-    <strong>Controlequalidade:</strong>
-    <%= pop.controleQualidade %>
-  </p>
+<div class="campo_text">
+  <th><b>Material:</b></th>
+  <td><%= pop.material %></td>
+</div>
 
-  <p>
-    <strong>Aplicabilidade:</strong>
-    <%= pop.aplicabilidade %>
-  </p>
+<div class="campo_img">
+  <th><b>Imagem do Material:</b></th><br>
+  <td><%= image_tag(@pop.imageMaterial_url.to_s, :style => "width: 300px; height: 300px;") %></td>
+</div>
 
-  <p>
-    <strong>Descricao:</strong>
-    <%= pop.descricao %>
-  </p>
+<div class="campo_text">
+  <th><b>Calibração:</b></th>
+  <td><%= pop.calibracao %></td>
+</div>
 
-  <p>
-    <strong>Calculos:</strong>
-    <%= pop.calculos %>
-  </p>
+<div class="campo_text">
+  <th><b>Controle de Qualidade:</b></th>
+  <td><%= pop.controleQualidade %></td>
+</div>
 
-  <p>
-    <strong>Resultados:</strong>
-    <%= pop.resultados %>
-  </p>
+<div class="campo_text">
+  <th><b>Aplicabilidade:</b></th>
+  <td><%= pop.aplicabilidade %></td>
+</div>
 
-  <p>
-    <strong>Comentários:</strong>
-    <%= pop.comentarios %>
-  </p>
+<div class="campo_text">
+  <th><b>Descrição:</b></th>
+  <td><%= pop.descricao %></td>
+</div>
 
-  <p>
-    <strong>Responsabilidade:</strong>
-    <%= pop.responsabilidade %>
-  </p>
+<div class="campo_text">
+  <th><b>Cálculos:</b></th>
+  <td><%= pop.calculos %></td>
+</div>
 
-  <p>
-    <strong>Autoridade:</strong>
-    <%= pop.autoridade %>
-  </p>
+<div class="campo_text">
+  <th><b>Resultados:</b></th>
+  <td><%= pop.resultados %></td>
+</div>
 
-  <p>
-    <strong>Normasseguranca:</strong>
-    <%= pop.normasSeguranca %>
-  </p>
+<div class="campo_text">
+  <th><b>Comentários:</b></th>
+  <td><%= pop.comentarios %></td>
+</div>
 
-  <p>
-    <strong>Treinamento:</strong>
-    <%= pop.treinamento %>
-  </p>
+<div class="campo_text">
+  <th><b>Responsabilidade:</b></th>
+  <td><%= pop.responsabilidade %></td>
+</div>
 
-  <p>
-    <strong>Documentosrelacionados:</strong>
-    <%= pop.documentosRelacionados %>
-  </p>
+<div class="campo_text">
+  <th><b>Autoridade:</b></th>
+  <td><%= pop.autoridade %></td>
+</div>
 
-  <p>
-    <strong>Referenciasnormativas:</strong>
-    <%= pop.referenciasNormativas %>
-  </p>
+<div class="campo_text">
+  <th><b>Normas de Segurança:</b></th>
+  <td><%= pop.normasSeguranca %></td>
+</div>
 
-  <p>
-    <strong>Fluxograma:</strong>
-    <%= pop.fluxograma %>
-  </p>
+<div class="campo_text">
+  <th><b>Treinamento:</b></th>
+  <td><%= pop.treinamento %></td>
+</div>
 
-  <p>
-    <strong>Controleregistro:</strong>
-    <%= pop.controleRegistro %>
-  </p>
+<div class="campo_text">
+  <th><b>Documentos Relacionados:</b></th>
+  <td><%= pop.documentosRelacionados %></td>
+</div>
 
-  <p>
-    <strong>Anexos:</strong>
-    <%= pop.anexos %>
-  </p>
+<div class="campo_text">
+  <th><b>Referências Normativas:</b></th>
+  <td><%= pop.referenciasNormativas %></td>
+</div>
 
-  <p>
-    <strong>Elaborado1:</strong>
-    <%= pop.elaborado1 %>
-  </p>
+<div class="campo_text">
+  <th><b>Fluxograma:</b></th>
+  <td><%= pop.fluxograma %></td>
+</div>
 
-  <p>
-    <strong>Elaborado2:</strong>
-    <%= pop.elaborado2 %>
-  </p>
+<div class="campo_img">
+  <th><b>Imagem do Fluxograma:</b></th><br>
+  <td><%= image_tag(@pop.imageFlowchart_url.to_s, :style => "width: 900px; height: 300px;") %></td>
+</div>
 
-  <p>
-    <strong>Revisado:</strong>
-    <%= pop.revisado %>
-  </p>
+<div class="campo_text">
+  <th><b>Controle de Registro:</b></th>
+  <td><%= pop.controleRegistro %></td>
+</div>
 
-  <p>
-    <strong>Formatado:</strong>
-    <%= pop.formatado %>
-  </p>
+<div class="campo_text">
+  <th><b>Anexos:</b></th>
+  <td><%= pop.anexos %></td>
+</div>
 
-  <p>
-    <strong>Validado1:</strong>
-    <%= pop.validado1 %>
-  </p>
+<div>
+  <table class="table_signature">
+    <tr>
+      <th>Elaborado:</th>
+      <th>Revisado:</th>
+      <th>Formatado:</th>
+      <th>Validado:</th>
+      <th>Aprovado</th>
+    </tr>
+    <tr>
+      <td><br><br><br><strong>__________________</strong><br><%= pop.elaborado1 %><br>
+      <strong>COREN/SC</strong><br><br><br><br><br><br><strong>__________________</strong>
+      <br><%= pop.elaborado2 %><br><strong>COREN/SC</strong><br><br><br><br></td>
 
-  <p>
-    <strong>Validado2:</strong>
-    <%= pop.validado2 %>
-  </p>
+      <td><br><br><br><strong>__________________</strong><br><%= pop.revisado %>
+      <br><strong>COREN/SC</strong></td>
 
-  <p>
-    <strong>Aprovado:</strong>
-    <%= pop.aprovado %>
-  </p>
+      <td><br><br><br><strong>__________________</strong><br><%= pop.formatado %>
+      <br><strong>COREN/SC</strong></td>
 
-  <p>
-    <strong>Dataaprovacao:</strong>
-    <%= pop.dataAprovacao %>
-  </p>
+      <td><br><br><br><strong>__________________</strong><br><%= pop.validado1 %><br>
+      <strong>COREN/SC</strong><br><br><br><br><br><br><strong>__________________</strong>
+      <br><%= pop.validado2 %><br><strong>COREN/SC</strong><br><br><br><br></td>
 
-  <p>
-    <strong>Dataimplementacao:</strong>
-    <%= pop.dataImplementacao %>
-  </p>
+      <td><br><br><br><strong>__________________</strong><br><%= pop.aprovado %>
+      <br><strong>COREN/SC</strong></td>
+    </tr>
+  </table>
+</div>
 
+<div>
+  <table class="table_signature">
+    <tr>
+      <th>Data de Aprovação:</th>
+      <th>Data de Implementação:</th>
+    </tr>
+    <tr>
+      <td><%= pop.day_approval %>/<%= pop.month_approval %>/<%= pop.year_approval %></td>
+      <td><%= pop.day_implement %>/<%= pop.month_implement %>/<%= pop.year_implement %></td>
+    </tr>
+  </table>
 </div>

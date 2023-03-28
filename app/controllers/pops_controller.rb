@@ -65,6 +65,12 @@ class PopsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pop_params
-      params.require(:pop).permit(:titulo, :objetivo, :amostra, :equipamento, :material, :calibracao, :controleQualidade, :aplicabilidade, :descricao, :calculos, :resultados, :comentarios, :responsabilidade, :autoridade, :normasSeguranca, :treinamento, :documentosRelacionados, :referenciasNormativas, :fluxograma, :controleRegistro, :anexos, :elaborado1, :elaborado2, :revisado, :formatado, :validado1, :validado2, :aprovado, :dataAprovacao, :dataImplementacao, imagemequip: [2])
+      params.require(:pop).permit(:titulo, :objetivo, :amostra, :equipamento, :material, :calibracao, 
+        :controleQualidade, :aplicabilidade, :descricao, :calculos, :resultados, :comentarios, 
+        :responsabilidade, :autoridade, :normasSeguranca, :treinamento, :documentosRelacionados, 
+        :referenciasNormativas, :fluxograma, :controleRegistro, :anexos, :elaborado1, :elaborado2, 
+        :revisado, :formatado, :validado1, :validado2, :aprovado, :dataAprovacao, :dataImplementacao, 
+        :imageEquipment, :imageMaterial, :imageFlowchart, :day_approval, :month_approval, :year_approval, 
+        :day_implement, :month_implement, :year_implement, :pop_sector, :pop_number)
     end
 end

@@ -14,12 +14,19 @@
 
   <p class="campo1">
     <%= link_to "INSTRUÇÕES", instructions_path, :class => "button", style: "position: relative; left: 4px;" %>
-    <b><%= form.label :"*Preencha as informações abaixo conforme definido pelo modelo padrão!", style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
+    <b><%= form.label :"*Preencha as informações abaixo conforme definido pelo modelo padrão!", 
+    style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
   
     <br><br><br><br>
 
     <b><%= form.label :"Título:", style: "display: block" %></b>
     <%= form.text_area :titulo, :cols => 158, :rows => 1 %><br>
+
+    <b><%= form.label :"Número de registro:", style: "display: block" %></b>
+    <%= form.text_area :pop_number, :cols => 158, :rows => 1 %><br>
+
+    <b><%= form.label :"Setor:", style: "display: block" %></b>
+    <%= form.text_area :pop_sector, :cols => 158, :rows => 1 %><br>
 
     <b><%= form.label :"Objetivo:", style: "display: block" %></b>
     <%= form.text_area :objetivo, :cols => 158, :rows => 15 %>
@@ -30,11 +37,14 @@
     <b><%= form.label :"Equipamento:", style: "display: block" %></b>
     <%= form.text_area :equipamento, :cols => 158, :rows => 15 %>
 
-    <b><%= form.label :"Imagem de Equipamento", style: "display: block" %></b>
-    <%= form.file_field :imagemequip, multiple: true %>
+    <b><%= form.label :"Adicionar Imagem:", style: "display: block" %></b>
+    <%= form.file_field :imageEquipment %><br><br>
 
     <b><%= form.label :"Material:", style: "display: block" %></b>
     <%= form.text_area :material, :cols => 158, :rows => 15 %>
+
+    <b><%= form.label :"Adicionar Imagem:", style: "display: block" %></b>
+    <%= form.file_field :imageMaterial %><br><br>
 
     <b><%= form.label :"Calibração:", style: "display: block" %></b>
     <%= form.text_area :calibracao, :cols => 158, :rows => 15 %>
@@ -78,6 +88,9 @@
     <b><%= form.label :"Fluxograma:", style: "display: block" %></b>
     <%= form.text_area :fluxograma, :cols => 158, :rows => 15 %>
 
+    <b><%= form.label :"Adicionar Imagem:", style: "display: block" %></b>
+    <%= form.file_field :imageFlowchart %><br><br>
+
     <b><%= form.label :"Controle de Registro:", style: "display: block" %></b>
     <%= form.text_area :controleRegistro, :cols => 158, :rows => 15 %>
 
@@ -86,36 +99,56 @@
   </p>
 
   <p class="campo2">
-    <b><%= form.label :"Elaborado por:", style: "display: block" %></b>
-    <%= form.text_area :elaborado1, :cols => 80, :rows => 1 %><br><br>
+    <%= form.label :"Elaborado por:", style: "display: block" %>
+    <%= form.text_area :elaborado1, :cols => 80, :rows => 1 %><br>
 
-    <b><%= form.label :"Elaborado por:", style: "display: block" %></b>
-    <%= form.text_area :elaborado2, :cols => 80, :rows => 1 %><br><br>
+    <%= form.label :"Elaborado por:", style: "display: block" %>
+    <%= form.text_area :elaborado2, :cols => 80, :rows => 1 %><br>
 
-    <b><%= form.label :"Revisado por:", style: "display: block" %></b>
-    <%= form.text_area :revisado, :cols => 80, :rows => 1 %><br><br>
+    <%= form.label :"Revisado por:", style: "display: block" %>
+    <%= form.text_area :revisado, :cols => 80, :rows => 1 %><br>
 
-    <b><%= form.label :"Formatado por:", style: "display: block" %></b>
-    <%= form.text_area :formatado, :cols => 80, :rows => 1 %><br><br>
+    <%= form.label :"Formatado por:", style: "display: block" %>
+    <%= form.text_area :formatado, :cols => 80, :rows => 1 %><br>
 
-    <b><%= form.label :"Validado por:", style: "display: block" %></b>
-    <%= form.text_area :validado1, :cols => 80, :rows => 1 %><br><br>
+    <%= form.label :"Validado por:", style: "display: block" %>
+    <%= form.text_area :validado1, :cols => 80, :rows => 1 %><br>
 
-    <b><%= form.label :"Validado por:", style: "display: block" %></b>
-    <%= form.text_area :validado2, :cols => 80, :rows => 1 %><br><br>
+    <%= form.label :"Validado por:", style: "display: block" %>
+    <%= form.text_area :validado2, :cols => 80, :rows => 1 %><br>
 
-    <b><%= form.label :"Aprovado por:", style: "display: block" %></b>
-    <%= form.text_area :aprovado, :cols => 80, :rows => 1 %><br><br>
+    <%= form.label :"Aprovado por:", style: "display: block" %>
+    <%= form.text_area :aprovado, :cols => 80, :rows => 1 %><br>
 
-    <b><%= form.label :"Data de Aprovação:", style: "display: block" %></b>
-    <%= form.text_area :dataAprovacao, :cols => 9, :rows => 1 %><br><br>
+    <br><b><%= form.label :"Data de Aprovação:", style: "display: block" %></b>
+    <%= form.label :"Dia/Mês/Ano:", style: "display: block" %>
 
-    <b><%= form.label :"Data de Implementação:", style: "display: block" %></b>
-    <%= form.text_area :dataImplementacao, :cols => 9, :rows => 1 %>
+    <%= form.select :day_approval, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
+    '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '21', '23', '24', 
+    '25', '26', '27', '28', '29', '30', '21'] %>
+      
+    <%= form.select :month_approval, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
+    '11', '12'] %>
+
+    <%= form.select :year_approval, ['2018', '2019', '2020', '2021', '2022', '2023', '2024'] %>
+
+    <br><br><b><%= form.label :"Data de Implementação:", style: "display: block" %></b>
+    <%= form.label :"Dia/Mês/Ano:", style: "display: block" %>
+
+    <%= form.select :day_implement, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
+    '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '21', '23', '24', 
+    '25', '26', '27', '28', '29', '30', '21'] %>
+    
+    <%= form.select :month_implement, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
+    '11', '12'] %>
+
+    <%= form.select :year_implement, ['2018', '2019', '2020', '2021', '2022', '2023', '2024'] %>
+    
   </p>
 
   <div class="strong2">
     <%= form.submit 'SALVAR', :class => "button" %>
     <%= link_to "CANCELAR", inicial_path, :class => "button" %>
   </div>
+
 <% end %>

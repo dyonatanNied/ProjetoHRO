@@ -14,10 +14,7 @@
   <%= link_to "VOLTAR", pops_path, :class => "button" %>
 </div>
 
-<div class="strong4">
-  <%= render @pop %>
-</div>
-
+<%= render @pop %>
 
 <div class="position3">
   <%= button_to "DELETAR POP", @pop, method: :delete, :class => "button" %>
