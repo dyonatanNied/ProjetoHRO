@@ -7,7 +7,11 @@ body {
   }
 
 footer {
-  background-color: #61a9da
+  background: #61a9da; /* para navegadores que não suportam gradientes */
+  background: -webkit-linear-gradient(#61a9da, rgb(1, 238, 255)); /* Safari */
+  background: -o-linear-gradient(#61a9da, rgb(1, 238, 255)); /* Opera */
+  background: -moz-linear-gradient(#61a9da, rgb(1, 238, 255)); /* Firefox */
+  background: linear-gradient(#61a9da, rgb(43, 123, 228)); /* padrão */
   }
 
 /* borda do sobre e privacidade*/

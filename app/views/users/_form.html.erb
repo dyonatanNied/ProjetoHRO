@@ -13,6 +13,8 @@
   <% end %>
 
   <p class="campo3">
+    <b><%= form.label :"Atenção: preencha todas as informações abaixo!!!", 
+    style: "position: relative; left: 7px; font-size: 15px; color: red;" %></b><br><br>
 
     <%= form.label :"Nome Completo:", style: "display: block" %>
     <%= form.text_area :name, :cols => 80, :rows => 1 %><br>
