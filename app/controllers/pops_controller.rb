@@ -71,6 +71,8 @@ class PopsController < ApplicationController
         :referenciasNormativas, :fluxograma, :controleRegistro, :anexos, :elaborado1, :elaborado2, 
         :revisado, :formatado, :validado1, :validado2, :aprovado, :dataAprovacao, :dataImplementacao, 
         :imageEquipment, :imageMaterial, :imageFlowchart, :day_approval, :month_approval, :year_approval, 
-        :day_implement, :month_implement, :year_implement, :pop_sector, :pop_number)
+        :day_implement, :month_implement, :year_implement, :pop_sector, :pop_number, :corenE1, :corenE2, 
+        :corenR1, :corenF1, :corenV1, :corenV2, :corenA1, :functionE1, :functionE2, :functionR1, :functionF1, 
+        :functionV1, :functionV2, :functionA1)
     end
 end

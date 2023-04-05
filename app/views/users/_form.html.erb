@@ -22,6 +22,9 @@
     <%= form.label :"Setor:", style: "display: block" %>
     <%= form.text_area :sector, :cols => 45, :rows => 1 %><br>
 
+    <%= form.label :"Função:", style: "display: block" %>
+    <%= form.text_area :function, :cols => 45, :rows => 1 %><br>
+
     <%= form.label :"COREN:", style: "display: block" %>
     <%= form.text_area :coren, :cols => 45, :rows => 1 %><br>
 
@@ -47,9 +50,8 @@
     <%= form.select :state, ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 
     'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'] %><br>
     <br>
-    <%= form.label :"Imagem de Perfil", style: "display: block" %>
+    <%= form.label :"Escolha uma imagem de Perfil", style: "display: block; font-size:16px" %>
     <%= form.file_field :image %>
-  
   </p>
 
 

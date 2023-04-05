@@ -244,6 +244,7 @@ DEPENDENCIES
   capybara
   carrierwave
   debug
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   paperclip (~> 6.0.0)

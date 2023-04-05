@@ -99,28 +99,58 @@
   </p>
 
   <p class="campo2">
-    <%= form.label :"Elaborado por:", style: "display: block" %>
-    <%= form.text_area :elaborado1, :cols => 80, :rows => 1 %><br>
+    <strong>Elaborado por:</strong><br>
+    <%= form.text_area :elaborado1, :cols => 70, :rows => 1 %><br>
+    <strong>Função/Cargo:</strong><br>
+    <%= form.text_area :functionE1, :cols => 70, :rows => 1 %><br>
+    <strong>COREN/SC:</strong><br>
+    <%= form.text_area :corenE1, :cols => 20, :rows => 1 %><br><br>
 
-    <%= form.label :"Elaborado por:", style: "display: block" %>
-    <%= form.text_area :elaborado2, :cols => 80, :rows => 1 %><br>
+    <strong>Elaborado por:</strong><br>
+    <%= form.text_area :elaborado2, :cols => 70, :rows => 1 %><br>
+    <strong>Função/Cargo:</strong><br>
+    <%= form.text_area :functionE2, :cols => 70, :rows => 1 %><br>
+    <strong>COREN/SC:</strong><br>
+    <%= form.text_area :corenE2, :cols => 20, :rows => 1 %><br><br>
 
-    <%= form.label :"Revisado por:", style: "display: block" %>
-    <%= form.text_area :revisado, :cols => 80, :rows => 1 %><br>
+    <strong>Revisado por:</strong><br>
+    <%= form.text_area :revisado, :cols => 70, :rows => 1 %><br>
+    <strong>Função/Cargo:</strong><br>
+    <%= form.text_area :functionR1, :cols => 70, :rows => 1 %><br>
+    <strong>COREN/SC:</strong><br>
+    <%= form.text_area :corenR1, :cols => 20, :rows => 1 %><br><br>
 
-    <%= form.label :"Formatado por:", style: "display: block" %>
-    <%= form.text_area :formatado, :cols => 80, :rows => 1 %><br>
+    <strong>Formatado por:</strong><br>
+    <%= form.text_area :formatado, :cols => 70, :rows => 1 %><br>
+    <strong>Função/Cargo:</strong><br>
+    <%= form.text_area :functionF1, :cols => 70, :rows => 1 %><br>
+    <strong>COREN/SC:</strong><br>
+    <%= form.text_area :corenF1, :cols => 20, :rows => 1 %><br><br>
 
-    <%= form.label :"Validado por:", style: "display: block" %>
-    <%= form.text_area :validado1, :cols => 80, :rows => 1 %><br>
+    <strong>Validado por:</strong><br>
+    <%= form.text_area :validado1, :cols => 70, :rows => 1 %><br>
+    <strong>Função/Cargo:</strong><br>
+    <%= form.text_area :functionV1, :cols => 70, :rows => 1 %><br>
+    <strong>COREN/SC:</strong><br>
+    <%= form.text_area :corenV1, :cols => 20, :rows => 1 %><br><br>
 
-    <%= form.label :"Validado por:", style: "display: block" %>
-    <%= form.text_area :validado2, :cols => 80, :rows => 1 %><br>
+    <strong>Validado por:</strong><br>
+    <%= form.text_area :validado2, :cols => 70, :rows => 1 %><br>
+    <strong>Função/Cargo:</strong><br>
+    <%= form.text_area :functionV2, :cols => 70, :rows => 1 %><br>
+    <strong>COREN/SC:</strong><br>
+    <%= form.text_area :corenV2, :cols => 20, :rows => 1 %><br><br>
 
-    <%= form.label :"Aprovado por:", style: "display: block" %>
-    <%= form.text_area :aprovado, :cols => 80, :rows => 1 %><br>
+    <strong>Aprovado por:</strong><br>
+    <%= form.text_area :aprovado, :cols => 70, :rows => 1 %><br>
+    <strong>Função/Cargo:</strong><br>
+    <%= form.text_area :functionA1, :cols => 70, :rows => 1 %><br>
+    <strong>COREN/SC:</strong><br>
+    <%= form.text_area :corenA1, :cols => 20, :rows => 1 %>
+  </p>
 
-    <br><b><%= form.label :"Data de Aprovação:", style: "display: block" %></b>
+  <p class="date">
+    <b><%= form.label :"Data de Aprovação:", style: "display: block" %></b>
     <%= form.label :"Dia/Mês/Ano:", style: "display: block" %>
 
     <%= form.select :day_approval, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
@@ -143,7 +173,6 @@
     '11', '12'] %>
 
     <%= form.select :year_implement, ['2018', '2019', '2020', '2021', '2022', '2023', '2024'] %>
-    
   </p>
 
   <div class="strong2">

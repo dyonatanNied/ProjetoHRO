@@ -15,7 +15,18 @@ p.campo1 {
 p.campo2 {
   margin-left: 77px;
   width: 86%;
-  height: 620px;
+  height: 1500px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p.date {
+  margin-left: 77px;
+  width: 86%;
+  height: 150px;
   border-style: groove; 
   padding: 25px;
   vertical-align: center;

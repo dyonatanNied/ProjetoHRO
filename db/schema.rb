@@ -10,7 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_28_190919) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_05_193403) do
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+  end
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum"
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
   create_table "forms", force: :cascade do |t|
     t.string "titulo"
     t.string "objetivo"
@@ -68,6 +106,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_190919) do
     t.string "validado1"
     t.string "validado2"
     t.string "aprovado"
+    t.string "dataAprovacao"
+    t.string "dataImplementacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "imagemequip"
@@ -83,6 +123,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_190919) do
     t.string "month_implement"
     t.string "pop_sector"
     t.string "pop_number"
+    t.string "corenE1"
+    t.string "corenE2"
+    t.string "corenR1"
+    t.string "corenF1"
+    t.string "corenV1"
+    t.string "corenV2"
+    t.string "corenA1"
+    t.string "functionE1"
+    t.string "functionE2"
+    t.string "functionR1"
+    t.string "functionF1"
+    t.string "functionV1"
+    t.string "functionV2"
+    t.string "functionA1"
   end
 
   create_table "users", force: :cascade do |t|
@@ -104,6 +158,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_28_190919) do
     t.string "street"
     t.string "adress_complement"
     t.string "address_complement"
+    t.string "function"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
 end
