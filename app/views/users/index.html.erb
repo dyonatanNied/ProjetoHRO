@@ -16,8 +16,7 @@
     <tr>
       <th>NOME</th>
       <th>SETOR</th>
-      <th>CIDADE</th>
-      <th>ESTADO</th>
+      <th>CIDADE/UF</th>
       <th>OPÇÕES</th>
     </tr>
   </thead>
@@ -27,8 +26,7 @@
         <tr>
           <td><%= user.name %></td>
           <td><%= user.sector %></td>
-          <td><%= user.city %></td>
-          <td><%= user.state %></td>
+          <td><%= user.city %>/<%= user.state %></td>
           <td><%= link_to "VISUALIZAR USUÁRIO", user, :class => "button" %></td>
         </tr>
       <% end %>

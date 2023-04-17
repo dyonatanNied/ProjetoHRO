@@ -1,134 +1,142 @@
 <%= stylesheet_link_tag "button", "pop", "table_signature", "show_pop" %>
 <div id="<%= dom_id pop %>">
 <br>
-<div class="campo_title">
-  <th><b>Título:</b></th>
-  <td><%= pop.titulo %></td>
-</div>
+
+<p class="date3">
+  <b>Número do POP:</b>
+  <%= pop.pop_number %>
+
+  <br><b>Setor:</b>
+  <%= pop.pop_sector %>
+
+  <br><br><b>Data de Elaboração:</b>
+  <%= pop.date_day_elaboration %>/<%= pop.date_month_elaboration %>/<%= pop.date_year_elaboration %>
+
+  <br><b>Data da Última Revisão:</b>
+  <%= pop.date_day_last_revision %>/<%= pop.date_month_last_revision %>/<%= pop.date_year_last_revision %>
+
+  <br><b>Data da Próxima Revisão:</b>
+  <%= pop.date_day_next_revision %>/<%= pop.date_month_next_revision %>/<%= pop.date_year_next_revision %>
+</p>
 
 <div class="campo_title">
-  <th><b>Número do POP:</b></th>
-  <td><%= pop.pop_number %></td>
-</div>
-
-<div class="campo_title">
-  <th><b>Setor do POP:</b></th>
-  <td><%= pop.pop_sector %></td>
+  <b>Título:</b>
+  <%= pop.titulo %>
 </div>
 
 <div class="campo_text">
-  <th><b>Objetivo:</b></th>
-  <td><%= pop.objetivo %></td>
+  <b>Objetivo:</b>
+  <%= pop.objetivo %>
 </div>
 
 <div class="campo_text">
-  <th><b>Amostra:</b></th>
-  <td><%= pop.amostra %></td>
+  <b>Amostra:</b>
+  <%= pop.amostra %>
 </div>
 
 <div class="campo_text">
-  <th><b>Equipamento:</b></th>
-  <td><%= pop.equipamento %></td>
+  <b>Equipamento:</b>
+  <%= pop.equipamento %>
 </div>
 
 <div class="campo_img">
-  <th><b>Imagem do Equipamento:</b></th><br>
-  <td><%= image_tag(@pop.imageEquipment_url.to_s, :style => "width: 300px; height: 300px;") %></td>
+  <b>Imagem do Equipamento:</b><br>
+  <%= image_tag(@pop.imageEquipment_url.to_s, :style => "width: 300px; height: 300px;") %>
 </div>
 
 <div class="campo_text">
-  <th><b>Material:</b></th>
-  <td><%= pop.material %></td>
+  <b>Material:</b>
+  <%= pop.material %>
 </div>
 
 <div class="campo_img">
-  <th><b>Imagem do Material:</b></th><br>
-  <td><%= image_tag(@pop.imageMaterial_url.to_s, :style => "width: 300px; height: 300px;") %></td>
+  <b>Imagem do Material:</b><br>
+  <%= image_tag(@pop.imageMaterial_url.to_s, :style => "width: 300px; height: 300px;") %>
 </div>
 
 <div class="campo_text">
-  <th><b>Calibração:</b></th>
-  <td><%= pop.calibracao %></td>
+  <b>Calibração:</b>
+  <%= pop.calibracao %>
 </div>
 
 <div class="campo_text">
-  <th><b>Controle de Qualidade:</b></th>
-  <td><%= pop.controleQualidade %></td>
+  <b>Controle de Qualidade:</b>
+  <%= pop.controleQualidade %>
 </div>
 
 <div class="campo_text">
-  <th><b>Aplicabilidade:</b></th>
-  <td><%= pop.aplicabilidade %></td>
+  <b>Aplicabilidade:</b>
+  <%= pop.aplicabilidade %>
 </div>
 
 <div class="campo_text">
-  <th><b>Descrição:</b></th>
-  <td><%= pop.descricao %></td>
+  <b>Descrição:</b>
+  <%= pop.descricao %>
 </div>
 
 <div class="campo_text">
-  <th><b>Cálculos:</b></th>
-  <td><%= pop.calculos %></td>
+  <b>Cálculos:</b>
+  <%= pop.calculos %>
 </div>
 
 <div class="campo_text">
-  <th><b>Resultados:</b></th>
-  <td><%= pop.resultados %></td>
+  <b>Resultados:</b>
+  <%= pop.resultados %>
 </div>
 
 <div class="campo_text">
-  <th><b>Comentários:</b></th>
-  <td><%= pop.comentarios %></td>
+  <b>Comentários:</b>
+  <%= pop.comentarios %>
 </div>
 
 <div class="campo_text">
-  <th><b>Responsabilidade:</b></th>
-  <td><%= pop.responsabilidade %></td>
+  <b>Responsabilidade:</b>
+  <%= pop.responsabilidade %>
 </div>
 
 <div class="campo_text">
-  <th><b>Autoridade:</b></th>
-  <td><%= pop.autoridade %></td>
+  <b>Autoridade:</b>
+  <%= pop.autoridade %>
 </div>
 
 <div class="campo_text">
-  <th><b>Normas de Segurança:</b></th>
-  <td><%= pop.normasSeguranca %></td>
+  <b>Normas de Segurança:</b>
+  <%= pop.normasSeguranca %>
 </div>
 
 <div class="campo_text">
-  <th><b>Treinamento:</b></th>
-  <td><%= pop.treinamento %></td>
+  <b>Treinamento:</b>
+  <%= pop.treinamento %>
 </div>
 
 <div class="campo_text">
-  <th><b>Documentos Relacionados:</b></th>
-  <td><%= pop.documentosRelacionados %></td>
+  <b>Documentos Relacionados:</b>
+  <%= pop.documentosRelacionados %>
 </div>
 
 <div class="campo_text">
-  <th><b>Referências Normativas:</b></th>
-  <td><%= pop.referenciasNormativas %></td>
+  <b>Referências Normativas:</b>
+  <%= simple_format(pop.referenciasNormativas) %>
 </div>
 
 <div class="campo_text">
-  <th><b>Fluxograma:</b></th>
-  <td><%= pop.fluxograma %></td>
+  <b>Fluxograma:</b>
+  <%= pop.fluxograma %>
 </div>
 
 <div class="campo_img">
-  <th><b>Imagem do Fluxograma:</b></th><br>
-  <td><%= image_tag(@pop.imageFlowchart_url.to_s, :style => "width: 900px; height: 300px;") %></td>
+  <b>Imagem do Fluxograma:</b><br>
+  <%= image_tag(@pop.imageFlowchart_url.to_s, :style => "width: 900px; height: 300px;") %>
 </div>
 
 <div class="campo_text">
-  <th><b>Controle de Registro:</b></th>
-  <td><%= pop.controleRegistro %></td>
+  <b>Controle de Registro:</b>
+  <%= pop.controleRegistro %>
 </div>
 
 <div class="campo_text">
-  <th><b>Anexos:</b></th>
-  <td><%= pop.anexos %></td>
+  <b>Anexos:</b>
+  <%= pop.anexos %>
 </div>
 
 <div>
@@ -138,7 +146,7 @@
       <th>Revisado:</th>
       <th>Formatado:</th>
       <th>Validado:</th>
-      <th>Aprovado</th>
+      <th>Aprovado:</th>
     </tr>
     <tr>
       <td><br><br><br><strong>_______________________</strong><br><%= pop.elaborado1 %><br>

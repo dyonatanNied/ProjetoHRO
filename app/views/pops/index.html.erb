@@ -14,7 +14,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th>NÚMERO DO PROCEDIMENTO OPERACIONAL PADRÃO - POP</th>
+      <th>NÚMERO DO POP</th>
+      <th>SETOR</th>
+      <th>DATA DE ELABORAÇÃO</th>
+      <th>DATA DA ÚLTIMA REVISÃO</th>
+      <th>DATA DA PRÓXIMA REVISÃO</th>
       <th>OPÇÕES</th>
     </tr>
   </thead>
@@ -22,7 +26,11 @@
     <tbody>
       <% @pops.each do |pop| %>
         <tr>
-          <td><%= pop.titulo %></td>
+          <td><%= pop.pop_number %></td>
+          <td><%= pop.pop_sector %></td>
+          <td><%= pop.date_day_elaboration %>/<%= pop.date_month_elaboration %>/<%= pop.date_year_elaboration %></td>
+          <td><%= pop.date_day_last_revision %>/<%= pop.date_month_last_revision %>/<%= pop.date_year_last_revision %></td>
+          <td><%= pop.date_day_next_revision %>/<%= pop.date_month_next_revision %>/<%= pop.date_year_next_revision %></td>
           <td><%= link_to "VISUALIZAR POP", pop, :class => "button" %></td>
         </tr>
       <% end %>

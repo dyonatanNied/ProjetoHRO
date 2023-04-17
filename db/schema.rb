@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_05_193403) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_10_171859) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -137,6 +137,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_05_193403) do
     t.string "functionV1"
     t.string "functionV2"
     t.string "functionA1"
+    t.string "date_elaboration"
+    t.string "date_last_revision"
+    t.string "date_next_revision"
+    t.string "date_day_elaboration"
+    t.string "date_month_elaboration"
+    t.string "date_year_elaboration"
+    t.string "date_day_last_revision"
+    t.string "date_month_last_revision"
+    t.string "date_year_last_revision"
+    t.string "date_day_next_revision"
+    t.string "date_month_next_revision"
+    t.string "date_year_next_revision"
   end
 
   create_table "users", force: :cascade do |t|

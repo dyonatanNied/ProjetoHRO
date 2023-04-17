@@ -23,10 +23,35 @@ p.campo2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* campo datas de aprovação e implementação */
 p.date {
   margin-left: 77px;
   width: 86%;
   height: 150px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* campo datas de elaboração, ultima revisão e próxima revisão */
+p.date2 {
+  margin-left: 77px;
+  width: 86%;
+  height: 230px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* campo número pop, setor, e datas*/
+p.date3 {
+  margin-left: 77px;
+  width: 84%;
+  height: 125px;
   border-style: groove; 
   padding: 25px;
   vertical-align: center;
