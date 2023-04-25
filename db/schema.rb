@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_10_171859) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_19_191530) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -47,6 +47,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_171859) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "forms", force: :cascade do |t|
@@ -106,15 +116,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_171859) do
     t.string "validado1"
     t.string "validado2"
     t.string "aprovado"
-    t.string "dataAprovacao"
-    t.string "dataImplementacao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "imagemequip"
-    t.string "imagemflowchar"
-    t.string "imageEquipment"
-    t.string "imageMaterial"
-    t.string "imageFlowchart"
     t.string "day_approval"
     t.string "month_approval"
     t.string "year_approval"
@@ -137,9 +140,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_171859) do
     t.string "functionV1"
     t.string "functionV2"
     t.string "functionA1"
-    t.string "date_elaboration"
-    t.string "date_last_revision"
-    t.string "date_next_revision"
     t.string "date_day_elaboration"
     t.string "date_month_elaboration"
     t.string "date_year_elaboration"
@@ -154,7 +154,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_171859) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "adress"
     t.string "city"
     t.string "state"
     t.string "sector"
@@ -163,12 +162,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_10_171859) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
-    t.string "imagemMaterial"
     t.string "coren"
     t.string "phone"
     t.string "district"
     t.string "street"
-    t.string "adress_complement"
     t.string "address_complement"
     t.string "function"
   end

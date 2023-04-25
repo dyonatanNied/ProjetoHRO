@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "button", "pop", "table_signature", "show_pop" %>
+<%= stylesheet_link_tag "button", "pop", "table_signature", "show_pop", "no_footer" %>
 <div id="<%= dom_id pop %>">
 <br>
 
@@ -26,117 +26,102 @@
 
 <div class="campo_text">
   <b>Objetivo:</b>
-  <%= pop.objetivo %>
+  <%= raw pop.objetivo %>
 </div>
 
 <div class="campo_text">
   <b>Amostra:</b>
-  <%= pop.amostra %>
+  <%= raw pop.amostra %>
 </div>
 
 <div class="campo_text">
   <b>Equipamento:</b>
-  <%= pop.equipamento %>
-</div>
-
-<div class="campo_img">
-  <b>Imagem do Equipamento:</b><br>
-  <%= image_tag(@pop.imageEquipment_url.to_s, :style => "width: 300px; height: 300px;") %>
+  <%= raw pop.equipamento %>
 </div>
 
 <div class="campo_text">
   <b>Material:</b>
-  <%= pop.material %>
-</div>
-
-<div class="campo_img">
-  <b>Imagem do Material:</b><br>
-  <%= image_tag(@pop.imageMaterial_url.to_s, :style => "width: 300px; height: 300px;") %>
+  <%= raw pop.material %>
 </div>
 
 <div class="campo_text">
   <b>Calibração:</b>
-  <%= pop.calibracao %>
+  <%= raw pop.calibracao %>
 </div>
 
 <div class="campo_text">
   <b>Controle de Qualidade:</b>
-  <%= pop.controleQualidade %>
+  <%= raw pop.controleQualidade %>
 </div>
 
 <div class="campo_text">
   <b>Aplicabilidade:</b>
-  <%= pop.aplicabilidade %>
+  <%= raw pop.aplicabilidade %>
 </div>
 
 <div class="campo_text">
   <b>Descrição:</b>
-  <%= pop.descricao %>
+  <%= raw pop.descricao %>
 </div>
 
 <div class="campo_text">
   <b>Cálculos:</b>
-  <%= pop.calculos %>
+  <%= raw pop.calculos %>
 </div>
 
 <div class="campo_text">
   <b>Resultados:</b>
-  <%= pop.resultados %>
+  <%= raw pop.resultados %>
 </div>
 
 <div class="campo_text">
   <b>Comentários:</b>
-  <%= pop.comentarios %>
+  <%= raw pop.comentarios %>
 </div>
 
 <div class="campo_text">
   <b>Responsabilidade:</b>
-  <%= pop.responsabilidade %>
+  <%= raw pop.responsabilidade %>
 </div>
 
 <div class="campo_text">
   <b>Autoridade:</b>
-  <%= pop.autoridade %>
+  <%= raw pop.autoridade %>
 </div>
 
 <div class="campo_text">
   <b>Normas de Segurança:</b>
-  <%= pop.normasSeguranca %>
+  <%= raw pop.normasSeguranca %>
 </div>
 
 <div class="campo_text">
   <b>Treinamento:</b>
-  <%= pop.treinamento %>
+  <%= raw pop.treinamento %>
 </div>
 
 <div class="campo_text">
   <b>Documentos Relacionados:</b>
-  <%= pop.documentosRelacionados %>
+  <%= raw pop.documentosRelacionados %>
 </div>
 
 <div class="campo_text">
   <b>Referências Normativas:</b>
-  <%= simple_format(pop.referenciasNormativas) %>
+  <%= raw pop.referenciasNormativas %>
 </div>
 
 <div class="campo_text">
   <b>Fluxograma:</b>
-  <%= pop.fluxograma %>
-</div>
-
-<div class="campo_img">
-  <b>Imagem do Fluxograma:</b><br>
-  <%= image_tag(@pop.imageFlowchart_url.to_s, :style => "width: 900px; height: 300px;") %>
+  <%= raw pop.fluxograma %>
 </div>
 
 <div class="campo_text">
   <b>Controle de Registro:</b>
-  <%= pop.controleRegistro %>
+  <%= raw pop.controleRegistro %>
 </div>
 
 <div class="campo_text">
   <b>Anexos:</b>
-  <%= pop.anexos %>
+  <%= raw pop.anexos %>
 </div>
 
 <div>

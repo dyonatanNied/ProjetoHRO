@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag "button", "pop" %>
+<%= javascript_include_tag Ckeditor.cdn_url %>
 <%= form_with(model: pop) do |form| %>
   <% if pop.errors.any? %>
     <div style="color: red">
@@ -26,76 +27,67 @@
     <%= form.text_area :pop_number, :cols => 158, :rows => 1 %><br>
 
     <b><%= form.label :"Setor:", style: "display: block" %></b>
-    <%= form.text_area :pop_sector, :cols => 158, :rows => 1 %><br>
+    <%= form.text_area :pop_sector, :cols => 158, :rows => 1 %><br><br>
 
     <b><%= form.label :"Objetivo:", style: "display: block" %></b>
-    <%= form.text_area :objetivo, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :objetivo, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Amostra:", style: "display: block" %></b>
-    <%= form.text_area :amostra, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :amostra, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Equipamento:", style: "display: block" %></b>
-    <%= form.text_area :equipamento, :cols => 158, :rows => 15 %>
-
-    <b><%= form.label :"Adicionar Imagem:", style: "display: block" %></b>
-    <%= form.file_field :imageEquipment %><br><br>
+    <%= form.cktext_area :equipamento, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Material:", style: "display: block" %></b>
-    <%= form.text_area :material, :cols => 158, :rows => 15 %>
-
-    <b><%= form.label :"Adicionar Imagem:", style: "display: block" %></b>
-    <%= form.file_field :imageMaterial %><br><br>
+    <%= form.cktext_area :material, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Calibração:", style: "display: block" %></b>
-    <%= form.text_area :calibracao, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :calibracao, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Controle de Qualidade:", style: "display: block" %></b>
-    <%= form.text_area :controleQualidade, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :controleQualidade, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Aplicabilidade:", style: "display: block" %></b>
-    <%= form.text_area :aplicabilidade, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :aplicabilidade, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Descrição:", style: "display: block" %></b>
-    <%= form.text_area :descricao, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :descricao, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Cálculos:", style: "display: block" %></b>
-    <%= form.text_area :calculos, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :calculos, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Resultados:", style: "display: block" %></b>
-    <%= form.text_area :resultados, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :resultados, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Comentários:", style: "display: block" %></b>
-    <%= form.text_area :comentarios, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :comentarios, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Responsabilidade:", style: "display: block" %></b>
-    <%= form.text_area :responsabilidade, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :responsabilidade, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Autoridade:", style: "display: block" %></b>
-    <%= form.text_area :autoridade, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :autoridade, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Normas de Seguranca:", style: "display: block" %></b>
-    <%= form.text_area :normasSeguranca, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :normasSeguranca, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Treinamento:", style: "display: block" %></b>
-    <%= form.text_area :treinamento, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :treinamento, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Documentos Relacionados:", style: "display: block" %></b>
-    <%= form.text_area :documentosRelacionados, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :documentosRelacionados, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Referências Normativas:", style: "display: block" %></b>
-    <%= form.text_area :referenciasNormativas, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :referenciasNormativas, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Fluxograma:", style: "display: block" %></b>
-    <%= form.text_area :fluxograma, :cols => 158, :rows => 15 %>
-
-    <b><%= form.label :"Adicionar Imagem:", style: "display: block" %></b>
-    <%= form.file_field :imageFlowchart %><br><br>
+    <%= form.cktext_area :fluxograma, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Controle de Registro:", style: "display: block" %></b>
-    <%= form.text_area :controleRegistro, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :controleRegistro, :cols => 158, :rows => 15 %><br>
 
     <b><%= form.label :"Anexos:", style: "display: block" %></b>
-    <%= form.text_area :anexos, :cols => 158, :rows => 15 %>
+    <%= form.cktext_area :anexos, :cols => 158, :rows => 15 %><br>
   </p>
 
   <p class="campo2">
