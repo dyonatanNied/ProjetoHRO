@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   
+  root 'inicial#index'
   resources :pops
   resources :users
   get 'inicial', to: 'inicial#index'

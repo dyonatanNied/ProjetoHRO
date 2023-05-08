@@ -7,6 +7,7 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -14,6 +15,9 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+
+  # referênciar o link do ngrok aqui
+  config.hosts << "cbed-179-124-146-24.ngrok-free.app"
 
   # Enable server timing
   config.server_timing = true
