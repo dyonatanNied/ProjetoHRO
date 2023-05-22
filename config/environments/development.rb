@@ -15,10 +15,10 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports.
-  config.consider_all_requests_local = true
+  config.consider_all_requests_local = false
 
   # referênciar o link do ngrok aqui
-  config.hosts << "cbed-179-124-146-24.ngrok-free.app"
+  # config.hosts << "cbed-179-124-146-24.ngrok-free.app"
 
   # Enable server timing
   config.server_timing = true

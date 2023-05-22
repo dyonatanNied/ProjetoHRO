@@ -256,6 +256,7 @@ DEPENDENCIES
   mini_magick
   paperclip (~> 6.0.0)
   puma (~> 5.0)
+  racc
   rails (~> 7.0.4, >= 7.0.4.2)
   selenium-webdriver
   sprockets-rails
