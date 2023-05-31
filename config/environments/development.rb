@@ -17,8 +17,6 @@ Rails.application.configure do
   config.consider_all_requests_local = false
 
   # referênciar o link do ngrok aqui
-  
-  Rails.application.config.hosts << "7150-179-124-146-19.ngrok-free.app"
 
   # Enable server timing
   config.server_timing = true
