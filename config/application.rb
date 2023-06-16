@@ -16,7 +16,6 @@ module ProjetoHRO
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    config.hosts << "5983-179-124-146-19.ngrok-free.app"
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
