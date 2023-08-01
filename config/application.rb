@@ -1,4 +1,5 @@
-require_relative "boot"
+
+require "bootsnap/setup"
 
 require "rails/all"
 
