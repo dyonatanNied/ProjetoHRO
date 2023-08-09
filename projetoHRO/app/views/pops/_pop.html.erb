@@ -1,0 +1,170 @@
+<%= stylesheet_link_tag "button", "pop", "table_signature", "show_pop", "no_footer", "application" %>
+<div id="<%= dom_id pop %>">
+<br>
+
+<p class="date3">
+  <b>Número do POP:</b>
+  <%= pop.pop_number %>
+
+  <br><b>Setor:</b>
+  <%= pop.pop_sector %>
+
+  <br><br><b>Data de Elaboração:</b>
+  <%= pop.date_day_elaboration %>/<%= pop.date_month_elaboration %>/<%= pop.date_year_elaboration %>
+
+  <br><b>Data da Última Revisão:</b>
+  <%= pop.date_day_last_revision %>/<%= pop.date_month_last_revision %>/<%= pop.date_year_last_revision %>
+
+  <br><b>Data da Próxima Revisão:</b>
+  <%= pop.date_day_next_revision %>/<%= pop.date_month_next_revision %>/<%= pop.date_year_next_revision %>
+</p>
+
+<div class="title">
+  <b>Título:</b>
+  <%= pop.titulo %>
+</div>
+
+<div class="text">
+  <b>Objetivo:</b>
+  <%= raw pop.objetivo %>
+</div>
+
+<div class="text">
+  <b>Amostra:</b>
+  <%= raw pop.amostra %>
+</div>
+
+<div class="text">
+  <b>Equipamento:</b>
+  <%= raw pop.equipamento %>
+</div>
+
+<div class="text">
+  <b>Material:</b>
+  <%= raw pop.material %>
+</div>
+
+<div class="text">
+  <b>Calibração:</b>
+  <%= raw pop.calibracao %>
+</div>
+
+<div class="text">
+  <b>Controle de Qualidade:</b>
+  <%= raw pop.controleQualidade %>
+</div>
+
+<div class="text">
+  <b>Aplicabilidade:</b>
+  <%= raw pop.aplicabilidade %>
+</div>
+
+<div class="text">
+  <b>Descrição:</b>
+  <%= raw pop.descricao %>
+</div>
+
+<div class="text">
+  <b>Cálculos:</b>
+  <%= raw pop.calculos %>
+</div>
+
+<div class="text">
+  <b>Resultados:</b>
+  <%= raw pop.resultados %>
+</div>
+
+<div class="text">
+  <b>Comentários:</b>
+  <%= raw pop.comentarios %>
+</div>
+
+<div class="text">
+  <b>Responsabilidade:</b>
+  <%= raw pop.responsabilidade %>
+</div>
+
+<div class="text">
+  <b>Autoridade:</b>
+  <%= raw pop.autoridade %>
+</div>
+
+<div class="text">
+  <b>Normas de Segurança:</b>
+  <%= raw pop.normasSeguranca %>
+</div>
+
+<div class="text">
+  <b>Treinamento:</b>
+  <%= raw pop.treinamento %>
+</div>
+
+<div class="text">
+  <b>Documentos Relacionados:</b>
+  <%= raw pop.documentosRelacionados %>
+</div>
+
+<div class="text">
+  <b>Referências Normativas:</b>
+  <%= raw pop.referenciasNormativas %>
+</div>
+
+<div class="text">
+  <b>Fluxograma:</b>
+  <%= raw pop.fluxograma %>
+</div>
+
+<div class="text">
+  <b>Controle de Registro:</b>
+  <%= raw pop.controleRegistro %>
+</div>
+
+<div class="text">
+  <b>Anexos:</b>
+  <%= raw pop.anexos %>
+</div>
+
+<div>
+  <table class="table_signature">
+    <tr>
+      <th>Elaborado:</th>
+      <th>Revisado:</th>
+      <th>Formatado:</th>
+      <th>Validado:</th>
+      <th>Aprovado:</th>
+    </tr>
+    <tr>
+      <td><br><br><br><strong>_______________________</strong><br><%= pop.elaborado1 %><br>
+      <%= pop.functionE1 %><strong><br>COREN/SC</strong><br><%= pop.corenE1 %><br><br><br><br><br>
+      <strong>_______________________</strong><br><%= pop.elaborado2 %><br><%= pop.functionE2 %><br>
+      <strong>COREN/SC</strong><br><%= pop.corenE2 %><br><br><br></td>
+
+      <td><br><br><br><strong>_______________________</strong><br><%= pop.revisado %><br>
+      <%= pop.functionR1 %><br><strong>COREN/SC</strong><br><%= pop.corenR1 %></td>
+
+      <td><br><br><br><strong>_______________________</strong><br><%= pop.formatado %><br>
+      <%= pop.functionF1 %><br><strong>COREN/SC</strong><br><%= pop.corenF1 %></td>
+
+      <td><br><br><br><strong>_______________________</strong><br><%= pop.validado1 %><br>
+      <%= pop.functionV1 %><strong><br>COREN/SC</strong><br><%= pop.corenV1 %><br><br><br><br><br>
+      <strong>_______________________</strong><br><%= pop.validado2 %><br><%= pop.functionV2 %><br>
+      <strong>COREN/SC</strong><br><%= pop.corenV2 %><br><br><br></td>
+
+      <td><br><br><br><strong>_______________________</strong><br><%= pop.aprovado %><br>
+      <%= pop.functionA1 %><br><strong>COREN/SC</strong><br><%= pop.corenA1 %></td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <table class="table_signature">
+    <tr>
+      <th>Data de Aprovação:</th>
+      <th>Data de Implementação:</th>
+    </tr>
+    <tr>
+      <td><%= pop.day_approval %>/<%= pop.month_approval %>/<%= pop.year_approval %></td>
+      <td><%= pop.day_implement %>/<%= pop.month_implement %>/<%= pop.year_implement %></td>
+    </tr>
+  </table>
+</div>

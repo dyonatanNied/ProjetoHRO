@@ -1,0 +1,44 @@
+.navbar {
+  min-height: 100px;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  max-width: 1400px;
+  
+}
+
+/* borda do sobre e privacidade*/
+p.borda {
+margin-left: 77px;
+width: 86%;
+height: 180px;
+border-style: groove; 
+padding: 25px;
+vertical-align: center;
+font-size: 17px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* borda do nome do usuário página*/
+p.borda2{
+border: 1px solid black;
+width: 100px;
+height: 20px;
+text-align: center;
+}
+
+/* posição da imagem de usuario tela*/
+div.position_img_user{
+margin-left: 1100px;
+border: 1px solid black;
+width: 100px;
+height: 100px;
+}
+
+/* posição botões das páginas sobre e privacidade*/
+div.default_position{
+margin-top: 1px;
+margin-left: 77px;
+margin-bottom: 10px;
+}

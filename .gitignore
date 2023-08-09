@@ -9,27 +9,23 @@
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
-/db/*.sqlite3-*
+/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/tmp/pids/*              # this line
 !/log/.keep
 !/tmp/.keep
-
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+!/tmp/pids               # this line
+!/tmp/pids/.keep         # and this line
 
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
 
 /public/assets
+.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "button" %>
+<%= render 'shared/header' %>
+<div class="row-fluid">
+  <div class="span4" style="padding: 1%; background-color: #ffffff;">
+    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>SOBRE</big></p></b>
+  </div>
+</div>
+
+<div class="default_position">
+  <%= link_to "VOLTAR", inicial_path, :class => "button" %>
+</div>
+
+<p class="borda">
+
+    Este sistema foi desenvolvido pelo Laboratório de Testes de Software da Universidade Comunitária 
+    da Região de Chapecó - UNOCHAPECÓ em parceria com o Hospital Regional do Oeste - HRO. Tem como 
+    objetivo prover uma plataforma para gerenciamento e controle de Procedimentos Operacionais Padrões - POP.
+
+</p>
+
+<%= render 'shared/footer' %>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sistema de Controle de POPs</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <%= csrf_meta_tags %> <! meta tag necessária para salvar e editar formulários> 
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag "pop.css", "button.css", "header.css", "table.css", "application.css", 
+      "footer", "no_footer.css", "print.css", "show_pop.css", "style.css", "table_signature.css", 
+      "user.css", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <div class="container">
+        <%= yield %>
+    </div>
+  </body>
+</html>
