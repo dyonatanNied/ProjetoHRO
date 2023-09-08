@@ -1,10 +1,10 @@
 /* primeiro campo do formulário de POP */
 p.campo1 {
-  margin-left: 77px;
+  margin-left: 57px;
   width: 86%;
-  height: 7200px;
+  height: auto;
   border-style: groove; 
-  padding: 25px;
+  padding: 20px;
   vertical-align: center;
   font-size: 17px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -13,105 +13,106 @@ p.campo1 {
 
 /* segundo campo do formulário de POP */
 p.campo2 {
-margin-left: 77px;
-width: 86%;
-height: 1500px;
-border-style: groove; 
-padding: 25px;
-vertical-align: center;
-font-size: 17px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 57px;
+  width: 86%;
+  height: auto;
+  border-style: groove; 
+  padding: 20px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* campo datas de aprovação e implementação */
 p.date {
-margin-left: 77px;
-width: 86%;
-height: 150px;
-border-style: groove; 
-padding: 25px;
-vertical-align: center;
-font-size: 17px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 57px;
+  width: 86%;
+  height: auto;
+  border-style: groove; 
+  padding: 20px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* campo datas de elaboração, ultima revisão e próxima revisão */
 p.date2 {
-margin-left: 77px;
-width: 86%;
-height: 230px;
-border-style: groove; 
-padding: 25px;
-vertical-align: center;
-font-size: 17px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 57px;
+  width: 86%;
+  height: auto;
+  border-style: groove; 
+  padding: 20px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* campo número pop, setor, e datas*/
 p.date3 {
-margin-left: 77px;
-width: 84%;
-height: 125px;
-border-style: groove; 
-padding: 25px;
-vertical-align: center;
-font-size: 17px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-left: 57px;
+  width: 86%;
+  height: 125px;
+  border-style: groove; 
+  padding: 20px;
+  vertical-align: center;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* campo de texto do formulário */
 textarea {
-padding: 5px;
-box-sizing: border-box;
-border: 2px solid #ccc;
-border-radius: 4px;
-margin-bottom: 4px;
-margin-top: 2px;
-background-color: #ecf2f5;
-font-size: 15px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-resize: none;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  margin-top: 2px;
+  background-color: #ecf2f5;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  resize: none;
+  width: 100%;
 }
 
 /* posição dos botões MENU PRINCIPAL da página LISTA DE POP*/
 div.strong3{ 
-font-size: 18px;
-font-family: cambria;
-margin-left: 15px;
-margin-bottom: 2px;
+  font-size: 18px;
+  font-family: cambria;
+  margin-left: 40px;
+  margin-bottom: 2px;
 }
 
 /* visualizar POP*/
 div.strong4{
-margin-top: 2px;
-margin-left: 77px;
-width: 86%;
-height: 2000px;
-border-style: groove; 
-padding: 25px;
-vertical-align: center;
-font-size: 18px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 2px;
+  margin-left: 77px;
+  width: 86%;
+  height: 2000px;
+  border-style: groove; 
+  padding: 25px;
+  vertical-align: center;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* botões voltar e editar da página visualizar pop */
 div.position{
-margin-top: 1px;
-margin-left: 77px;
-margin-bottom: 10px;
+  margin-top: 1px;
+  margin-left: 77px;
+  margin-bottom: 10px;
 }
 
 /* posição botão deletar */ 
 div.position3{
-margin-top: 10px;
-margin-left: 77px;
+  margin-top: 10px;
+  margin-left: 77px;
 }
 
 /* botões salvar e cancelar */
 div.strong2{
-font-size: 18px;
-font-family: cambria; 
-color: #000000;
-padding: 3px;
-margin-left: 77px;
+  font-size: 18px;
+  font-family: cambria; 
+  color: #000000;
+  padding: 3px;
+  margin-left: 57px;
 }

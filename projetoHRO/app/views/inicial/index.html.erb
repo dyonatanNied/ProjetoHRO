@@ -1,29 +1,19 @@
 <html>
+    
     <%= stylesheet_link_tag "button", "footer", "header" %>
     <%= render 'shared/header' %> 
     <div class="row-fluid">
         <div class="span4" style="padding: 1%; background-color: #ffffff;">
-            <b><p style="margin-top: 50x; text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>Sistema de Controle e Gerenciamento de POPs</big></p></b>
+            <br><b><p style="margin-top: 150x; text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>Sistema de Controle e Gerenciamento de POPs</big></p></b>
         </div>
     </div>
     <body>
-        <div class="glow-on-hover" style="padding: 3%; background-color: #ffffff;">  
-            <div>
-                <p>
-                    <%= link_to "CRIAR NOVO POP", new_pop_path, :class => "button", :style => "margin-left: 84px;" %>
-                    <%= link_to "CONSULTAR LISTA DE POPs", pops_path, :class => "button" %>
-                    <%= link_to "CRIAR NOVO USUÁRIO", new_user_path, :class => "button" %>
-                    <%= link_to "USUÁRIOS CADASTRADOS", users_path, :class => "button" %>
-                    <%= link_to "SOBRE", about_path, :class => "button", :style => "margin-left: 130px;" %>
-                    <%= link_to "POLÍTICA DE PRIVACIDADE", privacy_path, :class => "button" %>
-                </p>
-            </div>
+        <div class="glow-on-hover" style="padding: 3%; background-color: #ffffff; margin-left: 190px;">  
+            <%= link_to "CRIAR NOVO POP", new_pop_path, :class => "button" %>
+            <%= link_to "CONSULTAR LISTA DE POPs", pops_path, :class => "button" %>
+            <%= link_to "CRIAR NOVO USUÁRIO", new_user_path, :class => "button" %>
+            <%= link_to "USUÁRIOS CADASTRADOS", users_path, :class => "button" %>
         </div>
         <%= render 'shared/footer' %> 
     </body>
 </html>
-
-
-
-
-

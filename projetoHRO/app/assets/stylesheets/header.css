@@ -1,10 +1,22 @@
 .header {
-    background-color: #ffffff;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block; /* Remove espaço abaixo da imagem */
+  margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
+
+
+.responsive-image {
+  max-width: 100%; /* A imagem não será mais larga do que seu contêiner */
+  height: auto; /* A altura será ajustada proporcionalmente à largura */
+  display: block; /* Remove espaço extra abaixo da imagem */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente, se necessário */
+}
+
+

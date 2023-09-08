@@ -1,3 +1,13 @@
-<div>
-    <%= image_tag 'logo', :align=> "center" %>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Imagem Responsiva</title>
+        <%= stylesheet_link_tag 'header' %>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <%= image_tag 'logo', alt: 'Imagem Responsiva', class: 'responsive-image' %>
+        </div>
+    </body>
+</html>
+

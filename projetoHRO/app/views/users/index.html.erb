@@ -1,37 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
 <p style="color: green"><%= notice %></p> <! mensagem de sucesso quando salva o pop> 
 <%= stylesheet_link_tag "button", "user", "table" %>
 <%= render 'shared/header' %> 
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
-    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>Usuários Cadastrados</big></p></b>
+    <br><b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; 
+    text-decoration: underline;"><big>Usuários Cadastrados</big></p></b><br><br>
   </div>
 </div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel=" stylesheet">
+	<!--Replace with your tailwind.css once created-->
+	<!--Regular Datatables CSS-->
+	<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+	<!--Responsive Extension Datatables CSS-->
+	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+</head>
 
 <div class="strong3">
-  <%= link_to "MENU PRINCIPAL", inicial_path, :class => "button" %>
-  <%= link_to "CRIAR NOVO USUÁRIO", new_user_path, :class => "button" %><br><br>
+  <%= link_to "CRIAR NOVO USUÁRIO", new_user_path, :class => "button" %>
+  <%= link_to "VOLTAR", inicial_path, :class => "button" %>
 </div>
-<table class="table">
-  <thead>
-    <tr>
-      <th>NOME</th>
-      <th>SETOR</th>
-      <th>CIDADE/UF</th>
-      <th>OPÇÕES</th>
-    </tr>
-  </thead>
-  <div id="users">
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <td><%= user.name %></td>
-          <td><%= user.sector %></td>
-          <td><%= user.city %>/<%= user.state %></td>
-          <td><%= link_to "VISUALIZAR USUÁRIO", user, :class => "button" %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </div>
-</table>
 
-<%= render 'shared/footer' %> 
+<body>
+	<div style="margin-left:40px; margin-top: 15px;">
+		<div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+			<table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+				<thead>
+            <tr>
+              <th>NOME</th>
+              <th>SETOR</th>
+              <th>CIDADE/UF</th>
+              <th>OPÇÕES</th>
+            </tr>
+          </thead>
+          <div id="users">
+            <tbody>
+              <% @users.each do |user| %>
+                <tr>
+                  <td><%= user.name %></td>
+                  <td><%= user.sector %></td>
+                  <td><%= user.city %>/<%= user.state %></td>
+                  <td><%= link_to "VISUALIZAR USUÁRIO", user, :class => "button" %></td>
+                </tr>
+              <% end %>
+            </tbody>
+			</table>
+		</div>
+	</div><br><br>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<!--Datatables -->
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			var table = $('#example').DataTable({
+					responsive: true
+				})
+				.columns.adjust()
+				.responsive.recalc();
+		});
+	</script>
+</body>
+</html>

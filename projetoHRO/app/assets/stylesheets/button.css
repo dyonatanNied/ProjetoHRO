@@ -1,6 +1,6 @@
   /* CSS BOTÕES */
   .button { /* botões */
-    display: inline-block;
+    display: inline-flex;
     padding: 10px 15px;
     font-size: 14px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -8,6 +8,7 @@
     text-align: center;	
     text-decoration: none;
     outline: none;
+    text-decoration: none;
     color: #fff;
     background-color: #61a9da;
     border: none;
