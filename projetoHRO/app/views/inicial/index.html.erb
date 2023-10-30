@@ -11,8 +11,11 @@
         <div class="glow-on-hover" style="padding: 3%; background-color: #ffffff; margin-left: 190px;">  
             <%= link_to "CRIAR NOVO POP", new_pop_path, :class => "button" %>
             <%= link_to "CONSULTAR LISTA DE POPs", pops_path, :class => "button" %>
-            <%= link_to "CRIAR NOVO USUÁRIO", new_user_path, :class => "button" %>
+            <% #= link_to "CRIAR NOVO USUÁRIO", new_user_registration_path, :class => "button" %>
             <%= link_to "USUÁRIOS CADASTRADOS", users_path, :class => "button" %>
+            <%= link_to "EDITAR USUÁRIO", edit_user_registration_path, :class => "button" %>
+            <%= link_to "SAIR", destroy_user_session_path, method: :delete, :class => "button" %>
+
         </div>
         <%= render 'shared/footer' %> 
     </body>

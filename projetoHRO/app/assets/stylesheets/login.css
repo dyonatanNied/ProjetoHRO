@@ -1,0 +1,129 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.card {
+    margin: auto;
+    background-color: #61a9da;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 100px;
+    padding-right: 130px;
+    border-radius: 2px;
+    width: 150px;
+    vertical-align: middle;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+input[type="submit"] {
+    background-color: #ffffff;
+    color: #61a9da;
+    padding: 10px 36px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 71px;
+    border-color: #4fa2da;
+
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3982db;
+    color: #ffffff;
+  }
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card {
+    background-color: #61a9da;
+    padding: 40px;
+    border-radius: 2px;
+    width: 280px;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+.card-header {
+    padding-bottom: 80px;
+    opacity: 1;
+    color: #ffffff;
+}
+
+.card-header::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -17px;
+    margin-left: -5px;
+}
+
+.card-content label {
+    color: #ffffff;
+    font-size: 18px;
+    opacity: 1;
+}
+
+.card-content-area {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    opacity: 1;
+}
+
+.card-content-area input {
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    color: #fff;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer .submit{
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    background-color: #ffffff;
+    border: none;
+    color: #61a9da;
+    margin: 10px 0;
+}
+
+.card-footer .submit:hover {
+    opacity: 1;
+    font-size: 20px;
+    color: #61a9da;
+  }
+
+.card-footer a {
+    text-align: center;
+    font-size: 16px;
+    opacity: 1;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.card-footer a:hover {
+    color: #083aa7;
+  }
+
+.card-remember{
+    color: #ffffff;
+    font-size: 15px;
+}

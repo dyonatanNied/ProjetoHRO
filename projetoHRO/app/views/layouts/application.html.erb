@@ -6,7 +6,7 @@
       <%= csrf_meta_tags %> <! meta tag necessária para salvar e editar formulários> 
       <%= csp_meta_tag %>
       <%= stylesheet_link_tag "test.css", "pop.css", "button.css", "header.css", "table.css", "application.css", 
-      "footer", "no_footer.css", "print.css", "show_pop.css", "style.css", "table_signature.css", 
+      "footer", "login.css", "no_footer.css", "print.css", "show_pop.css", "style.css", "table_signature.css", 
       "user.css", "data-turbo-track": "reload" %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -15,6 +15,14 @@
   <body>
     <div class="container">
         <%= yield %>
+        <% if user_signed_in? %>
+            Logado como <%= current_user.email %>.
+          <% else %>
+          <% end %>
+
+          <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, id: "flash_#{name}" %>
+          <% end %>
     </div>
   </body>
 </html>

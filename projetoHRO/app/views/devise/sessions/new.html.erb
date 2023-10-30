@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag "login" %>
+
+<div id="login">
+  <div class="card">
+    <div class="card-header">
+      <h2>SIG POP</h2>
+    </div>
+    
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="card-content">
+      <div class="card-content-area">
+        <%= f.label :Login %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="card-content-area">
+        <%= f.label :Senha %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+    </div>
+     
+    <div class="card-remember">
+      <% if devise_mapping.rememberable? %>
+        <%= f.check_box :remember_me %>
+        <%= f.label :Lembrar_dados %>
+      <% end %>
+    </div>
+      
+    <br><br>
+    <div class="button_log">
+      <%= f.submit "ENTRAR" %>
+    </div>
+    <br><br>
+ 
+    <% end %>
+   
+    <div class="card-footer">
+      <br><%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

@@ -22,3 +22,4 @@ RUN bundle install
 COPY $PATH_PROJECT /$PATH_PROJECT
 EXPOSE 3000
 CMD [ "bundle", "exec", "puma", "-C", "config/puma.rb" ]
+

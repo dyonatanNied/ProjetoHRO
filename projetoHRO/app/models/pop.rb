@@ -1,2 +1,3 @@
 class Pop < ApplicationRecord
+    
 end

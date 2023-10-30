@@ -1,4 +1,5 @@
 class PopsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_pop, only: %i[ show edit update destroy ]
 
   # GET /pops or /pops.json
@@ -25,7 +26,7 @@ class PopsController < ApplicationController
 
     respond_to do |format|
       if @pop.save
-        format.html { redirect_to pop_url(@pop), notice: "Pop was successfully created." }
+        format.html { redirect_to pop_url(@pop), notice: "Salvo com sucesso!" }
         format.json { render :show, status: :created, location: @pop }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +39,7 @@ class PopsController < ApplicationController
   def update
     respond_to do |format|
       if @pop.update(pop_params)
-        format.html { redirect_to pop_url(@pop), notice: "Pop was successfully updated." }
+        format.html { redirect_to pop_url(@pop), notice: "Alterações salvas!" }
         format.json { render :show, status: :ok, location: @pop }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +53,7 @@ class PopsController < ApplicationController
     @pop.destroy
 
     respond_to do |format|
-      format.html { redirect_to pops_url, notice: "Pop was successfully destroyed." }
+      format.html { redirect_to pops_url, notice: "Pop deletado!." }
       format.json { head :no_content }
     end
   end

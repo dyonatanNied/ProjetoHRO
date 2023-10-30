@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+    scope '/admin' do
+    resources :users
+  end
+  
   mount Ckeditor::Engine => '/ckeditor'
   
   root 'inicial#index'
@@ -12,4 +18,3 @@ Rails.application.routes.draw do
   get 'privacy', to: 'privacy#index'
 
 end
-

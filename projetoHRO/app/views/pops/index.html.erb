@@ -11,6 +11,33 @@
   </div>
 </div>
 
+<script>
+  // Verifique se o parâmetro "reload" está presente na URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const shouldReload = urlParams.has('reload');
+
+  // Se o parâmetro "reload" não estiver presente, redirecione para a mesma página com o parâmetro
+  if (!shouldReload) {
+    window.location.href = window.location.href + '?reload=true';
+  }
+</script>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--Datatables -->
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<script>
+	$(document).ready(function() {
+		var table = $('#example').DataTable({
+				responsive: true
+			})
+			.columns.adjust()
+			.responsive.recalc();
+	});
+</script>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +45,6 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel=" stylesheet">
-	<!--Replace with your tailwind.css once created-->
 	<!--Regular Datatables CSS-->
 	<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
 	<!--Responsive Extension Datatables CSS-->
@@ -34,46 +60,29 @@
 		<div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
 			<table id="example" class="stripe hover" style="width:100%; padding-top: 1em; padding-bottom: 1em;">
 				<thead>
-                <tr>
-                    <th>Número do Pop</th>
-                    <th>Setor</th>
-                    <th>Data de Elaboração</th>
-                    <th>Data da Última Revisão</th>
-                    <th>Data da Próxima Revisão</th>
-                    <th>Opções</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% @pops.each do |pop| %>
-                  <tr>
-                    <td><%= pop.pop_number %></td>
-                    <td><%= pop.pop_sector %></td>
-                    <td><%= pop.date_day_elaboration %>/<%= pop.date_month_elaboration %>/<%= pop.date_year_elaboration %></td>
-                    <td><%= pop.date_day_last_revision %>/<%= pop.date_month_last_revision %>/<%= pop.date_year_last_revision %></td>
-                    <td><%= pop.date_day_next_revision %>/<%= pop.date_month_next_revision %>/<%= pop.date_year_next_revision %></td>
-                    <td><%= link_to "VISUALIZAR POP", pop, :class => "button" %></td>
-                  </tr>
-                <% end %>
-            </tbody>
+          <tr>
+            <th>Número do Pop</th>
+            <th>Setor</th>
+            <th>Data de Elaboração</th>
+            <th>Data da Última Revisão</th>
+            <th>Data da Próxima Revisão</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @pops.each do |pop| %>
+            <tr>
+              <td><%= pop.pop_number %></td>
+              <td><%= pop.pop_sector %></td>
+              <td><%= pop.date_day_elaboration %>/<%= pop.date_month_elaboration %>/<%= pop.date_year_elaboration %></td>
+              <td><%= pop.date_day_last_revision %>/<%= pop.date_month_last_revision %>/<%= pop.date_year_last_revision %></td>
+              <td><%= pop.date_day_next_revision %>/<%= pop.date_month_next_revision %>/<%= pop.date_year_next_revision %></td>
+              <td><%= link_to "VISUALIZAR POP", pop, :class => "button" %></td>
+            </tr>
+          <% end %>
+        </tbody>
 			</table>
 		</div>
-	</div><br><br>
-
-	<!-- jQuery -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-	<!--Datatables -->
-	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-	<script>
-		$(document).ready(function() {
-
-			var table = $('#example').DataTable({
-					responsive: true
-				})
-				.columns.adjust()
-				.responsive.recalc();
-		});
-	</script>
+  </div><br><br>
 </body>
 </html>
