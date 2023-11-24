@@ -5,17 +5,14 @@
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
     <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>Procedimento Operacional Padrão</big></p></b>
   </div>
-</div>
+</div><br>
 
 <div class="position">
   <%= link_to "EDITAR POP", edit_pop_path(@pop), :class => "button" %>
   <! abaixo o botão imprimir, ainda não implementado> 
+  <%= button_to "DELETAR POP", @pop, method: :delete, :class => "button" %>
   <%= link_to "IMPRIMIR", print_path(@pop), :class => "button" %>
   <%= link_to "VOLTAR", pops_path, :class => "button" %>
 </div>
                                                                                                               
-<%= render @pop %>
-
-<div class="position3">
-  <%= button_to "DELETAR POP", @pop, method: :delete, :class => "button" %><br><br>
-</div>
+<%= render @pop %><br>

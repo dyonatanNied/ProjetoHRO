@@ -1,56 +1,56 @@
-<%= stylesheet_link_tag "button", "pop", "show_pop", "no_footer", "application" %>
+<%= stylesheet_link_tag "button", "pop", "show_pop", "no_footer", "application", "view_pop" %>
+<%= javascript_include_tag Ckeditor.cdn_url %>
 <div id="<%= dom_id pop %>">
 <br>
 
 <style>
-  .box1{
-    margin-left: 77px;
-    width: 84%;
-    border-style: groove;
-    padding: 25px;
-    font-size: 17px;
-    vertical-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+  div.box1{
+      margin-left: 77px;
+      width: 84%;
+      border-style: groove;
+      padding: 25px;
+      font-size: 17px;
+      vertical-align: center;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
 
-  .box2{
-    margin-left: 77px;
-    width: 86%;
-    border-style: groove;
-    font-size: 15px;
-    padding: 12px;
-    vertical-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    word-wrap: break-word;
-  }
+  div.box2{
+      margin-left: 77px;
+      width: 86%;
+      border-style: groove;
+      font-size: 15px;
+      padding: 12px;
+      vertical-align: center;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      word-wrap: break-word;
+    }
 
-  .box3{
-    margin: 10px;
-    margin-left: 77px;
-    width: 86%;
-    border-style: groove;
-    padding: 12px;
-    font-size: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    word-wrap: break-word;
-    vertical-align: center;
-  }
+  div.box3{
+      margin: 10px;
+      margin-left: 77px;
+      width: 86%;
+      border-style: groove;
+      padding: 12px;
+      font-size: 15px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      word-wrap: break-word;
+      vertical-align: center;
+    }
 
-  .box4{
-    margin: 10px;
-    margin-left: 77px;
-    width: 86%;
-    border-style: groove;
-    padding: 12px;
-    font-size: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    word-wrap: break-word;
-    vertical-align: center;
+  div.box4{
+      margin: 10px;
+      margin-left: 77px;
+      width: 86%;
+      border-style: groove;
+      padding: 12px;
+      font-size: 15px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      word-wrap: break-word;
+      vertical-align: center;
   }
-
 </style>
 
-<p class="box1">
+<div class="box1">
   <b>Número do POP:</b>
   <%= pop.pop_number %>
 
@@ -65,7 +65,7 @@
 
   <br><b>Data da Próxima Revisão:</b>
   <%= pop.date_day_next_revision %>/<%= pop.date_month_next_revision %>/<%= pop.date_year_next_revision %>
-</p>
+</div>
 
 <div class="box2">
   <b>Título:</b>

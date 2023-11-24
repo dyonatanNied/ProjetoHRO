@@ -5,11 +5,11 @@ Rails.application.routes.draw do
     resources :users
   end
   
+  
   mount Ckeditor::Engine => '/ckeditor'
   
   root 'inicial#index'
   resources :pops
-  resources :users
   get 'inicial', to: 'inicial#index'
   get 'login', to: 'login#index'
   get 'print', to: 'print#index'
@@ -18,3 +18,4 @@ Rails.application.routes.draw do
   get 'privacy', to: 'privacy#index'
 
 end
+  

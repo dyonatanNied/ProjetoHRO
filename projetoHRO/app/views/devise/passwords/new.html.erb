@@ -1,16 +1,28 @@
-<h2>ESQUECEU A SENHA?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%= stylesheet_link_tag "create_account" %>
+<%= render 'shared/header' %> 
+<div class="row-fluid">
+  <div class="span4" style="padding: 1%; background-color: #ffffff;">
+    <br><b><p style="margin-top: 150x; text-align: center; font-size: 24px; font-family: cambria; 
+        color: #3268cc; text-decoration: underline;"><big>Esqueceu a Senha?</big></p></b>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "ENVIAR E-MAIL" %>
-  </div>
-<% end %>
+<div class="field2">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= render "devise/shared/links" %>
+    <div class="field">
+      <%= f.label :"Informe seu E-mail para trocar a senha!" %><br>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "custom-input" %>
+    </div><br>
+
+    <div class="actions">
+      <%= f.submit "ENVIAR E-MAIL", :class => "button" %>
+      <%= link_to "VOLTAR", new_user_session_path, :class => "button" %>
+    </div>
+
+    <br><b><p style="position: relative; left: 7px; color: red; font-size: 12px;">
+      <big>*Aguarde!!! O envio do e-mail de confirmação pode demorar alguns minutos!</big></p></b>
+  <% end %>
+
+</div>

@@ -1,0 +1,32 @@
+/* Estilo para a div de erro */
+.error-explanation {
+    background-color: #ffecec;
+    border: 1px solid #f5aca6;
+    color: #cc0033;
+    padding: 10px;
+    max-width: 300px; /* Ajuste o tamanho máximo conforme desejado */
+    position: fixed;
+    top: 400px; /* Ajuste a distância do topo conforme necessário */
+    right: 150px; /* Ajuste a distância da direita conforme necessário */
+    z-index: 9999; /* Garante que a caixa esteja acima de outros elementos */
+  }
+  
+  /* Estilo para o título */
+  .error-explanation h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilo para a lista de mensagens de erro */
+  .error-explanation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilo para cada mensagem de erro na lista */
+  .error-explanation li {
+    margin-bottom: 3px;
+    font-size: 14px;
+  }
+  

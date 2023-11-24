@@ -4,12 +4,14 @@
 
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
-    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>Usuário Cadastrado</big></p></b>
+    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; 
+        text-decoration: underline;"><big>Usuário Cadastrado</big></p></b>
   </div>
 </div>
 
 <div class="position3">
-  <%= link_to "EDITAR", edit_user_path(@user), :class => "button" %>
+  <%= link_to "EDITAR USUÁRIO", edit_user_path(@user), :class => "button" %>
+  <%= button_to "DELETAR USUÁRIO", @user, method: :delete, :class => "button" %>
   <%= link_to "VOLTAR", users_path, :class => "button"%>
 </div>
 
@@ -17,6 +19,4 @@
   <%= render @user %>
 </div>
 
-<div class="position3">
-  <%= button_to "DELETAR USUÁRIO", @user, method: :delete, :class => "button" %><br>
-</div>
+<br><br>

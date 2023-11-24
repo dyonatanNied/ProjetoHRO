@@ -1,10 +1,21 @@
 <%= stylesheet_link_tag "button", "pop", "table_signature", "show_pop", "no_footer", "application" %>
 <%= javascript_include_tag Ckeditor.cdn_url %>
+
+<script>
+  // Verifique se o parâmetro "reload" está presente na URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const shouldReload = urlParams.has('reload');
+
+  // Se o parâmetro "reload" não estiver presente, redirecione para a mesma página com o parâmetro
+  if (!shouldReload) {
+    window.location.href = window.location.href + '?reload=true';
+  }
+</script>
+
 <%= form_with(model: pop) do |form| %>
   <% if pop.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(pop.errors.count, "error") %> prohibited this pop from being saved:</h2>
-
       <ul>
         <% pop.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -13,136 +24,168 @@
     </div>
   <% end %>
 
-  <p class="campo1">
-    <%= link_to "INSTRUÇÕES", instructions_path, :class => "button", style: "position: relative; left: 4px;" %>
-    <b><%= form.label :"*Preencha as informações abaixo conforme definido pelo modelo padrão!", 
-    style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
-  
-    <br><br><br>
+  <div class="campo1">
+    <div class="textarea">
+      <%= link_to "INSTRUÇÕES", instructions_path, :class => "button", style: "position: relative; left: 4px;" %>
+      <b><%= form.label :"*Preencha as informações abaixo conforme definido pelo modelo padrão!", 
+      style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
+    
+      <br><br><br>
 
-    <b><%= form.label :"Título:" %></b>
-    <%= form.text_area :titulo, :cols => 158, :rows => 1 %><br>
+      <b><%= form.label :"Título:" %></b><br>
+      <%= form.text_area :titulo, :rows => 1 %><br>
 
-    <b><%= form.label :"Número de registro:" %></b>
-    <%= form.text_area :pop_number, :cols => 158, :rows => 1 %><br>
+      <b><%= form.label :"Número de registro:" %></b><br>
+      <%= form.text_area :pop_number, :rows => 1 %><br>
 
-    <b><%= form.label :"Setor:" %></b>
-    <%= form.text_area :pop_sector, :cols => 158, :rows => 1 %><br><br>
+      <b><%= form.label :"Setor:" %></b><br>
+      <%= form.text_area :pop_sector, :rows => 1 %><br><br>
 
-    <b><%= form.label :"Objetivo:", style: "display: block" %></b>
-    <%= form.cktext_area :objetivo, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Objetivo:", style: "display: block" %></b>
+      <%= form.cktext_area :objetivo, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Amostra:", style: "display: block" %></b>
-    <%= form.cktext_area :amostra, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Amostra:", style: "display: block" %></b>
+      <%= form.cktext_area :amostra, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Equipamento:", style: "display: block" %></b>
-    <%= form.cktext_area :equipamento, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Equipamento:", style: "display: block" %></b>
+      <%= form.cktext_area :equipamento, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Material:", style: "display: block" %></b>
-    <%= form.cktext_area :material, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Material:", style: "display: block" %></b>
+      <%= form.cktext_area :material, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Calibração:", style: "display: block" %></b>
-    <%= form.cktext_area :calibracao, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Calibração:", style: "display: block" %></b>
+      <%= form.cktext_area :calibracao, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Controle de Qualidade:", style: "display: block" %></b>
-    <%= form.cktext_area :controleQualidade, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Controle de Qualidade:", style: "display: block" %></b>
+      <%= form.cktext_area :controleQualidade, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Aplicabilidade:", style: "display: block" %></b>
-    <%= form.cktext_area :aplicabilidade, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Aplicabilidade:", style: "display: block" %></b>
+      <%= form.cktext_area :aplicabilidade, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Descrição:", style: "display: block" %></b>
-    <%= form.cktext_area :descricao, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Descrição:", style: "display: block" %></b>
+      <%= form.cktext_area :descricao, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Cálculos:", style: "display: block" %></b>
-    <%= form.cktext_area :calculos, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Cálculos:", style: "display: block" %></b>
+      <%= form.cktext_area :calculos, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Resultados:", style: "display: block" %></b>
-    <%= form.cktext_area :resultados, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Resultados:", style: "display: block" %></b>
+      <%= form.cktext_area :resultados, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Comentários:", style: "display: block" %></b>
-    <%= form.cktext_area :comentarios, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Comentários:", style: "display: block" %></b>
+      <%= form.cktext_area :comentarios, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Responsabilidade:", style: "display: block" %></b>
-    <%= form.cktext_area :responsabilidade, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Responsabilidade:", style: "display: block" %></b>
+      <%= form.cktext_area :responsabilidade, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Autoridade:", style: "display: block" %></b>
-    <%= form.cktext_area :autoridade, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Autoridade:", style: "display: block" %></b>
+      <%= form.cktext_area :autoridade, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Normas de Seguranca:", style: "display: block" %></b>
-    <%= form.cktext_area :normasSeguranca, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Normas de Seguranca:", style: "display: block" %></b>
+      <%= form.cktext_area :normasSeguranca, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Treinamento:", style: "display: block" %></b>
-    <%= form.cktext_area :treinamento, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Treinamento:", style: "display: block" %></b>
+      <%= form.cktext_area :treinamento, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Documentos Relacionados:", style: "display: block" %></b>
-    <%= form.cktext_area :documentosRelacionados, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Documentos Relacionados:", style: "display: block" %></b>
+      <%= form.cktext_area :documentosRelacionados, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Referências Normativas:", style: "display: block" %></b>
-    <%= form.cktext_area :referenciasNormativas, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Referências Normativas:", style: "display: block" %></b>
+      <%= form.cktext_area :referenciasNormativas, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Fluxograma:", style: "display: block" %></b>
-    <%= form.cktext_area :fluxograma, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Fluxograma:", style: "display: block" %></b>
+      <%= form.cktext_area :fluxograma, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Controle de Registro:", style: "display: block" %></b>
-    <%= form.cktext_area :controleRegistro, :cols => 158, :rows => 15 %><br>
+      <b><%= form.label :"Controle de Registro:", style: "display: block" %></b>
+      <%= form.cktext_area :controleRegistro, :cols => 158, :rows => 15 %><br>
 
-    <b><%= form.label :"Anexos:", style: "display: block" %></b>
-    <%= form.cktext_area :anexos, :cols => 158, :rows => 15 %><br>
-  </p>
+      <b><%= form.label :"Anexos:", style: "display: block" %></b>
+      <%= form.cktext_area :anexos, :cols => 158, :rows => 15 %><br>
+    </div>
+  </div><br>
 
-  <p class="campo2">
-    <strong>Elaborado por:</strong><br>
-    <%= form.text_area :elaborado1, :cols => 70, :rows => 1 %><br>
-    <strong>Função/Cargo:</strong><br>
-    <%= form.text_area :functionE1, :cols => 70, :rows => 1 %><br>
-    <strong>COREN/SC:</strong><br>
-    <%= form.text_area :corenE1, :cols => 20, :rows => 1 %><br><br>
+  <div class="campo2">
+    <div class="textarea1">
+      <b><%= form.label :"Documento elaborado por:", 
+      style: "position: relative; left: 3px; font-size: 18px; color: black;" %></b><br><br>
+      <strong>Nome Completo:</strong><br>
+      <%= form.text_area :elaborado1, :rows => 1 %><br>
+      <strong>Função/Cargo:</strong><br>
+      <%= form.text_area :functionE1, :rows => 1 %><br>
+      <strong>COREN/SC:</strong><br>
+      <%= form.text_area :corenE1, :rows => 1 %><br><br>
 
-    <strong>Elaborado por:</strong><br>
-    <%= form.text_area :elaborado2, :cols => 70, :rows => 1 %><br>
-    <strong>Função/Cargo:</strong><br>
-    <%= form.text_area :functionE2, :cols => 70, :rows => 1 %><br>
-    <strong>COREN/SC:</strong><br>
-    <%= form.text_area :corenE2, :cols => 20, :rows => 1 %><br><br>
+      <strong>Nome Completo:</strong><br>
+      <%= form.text_area :elaborado2, :rows => 1 %><br>
+      <strong>Função/Cargo:</strong><br>
+      <%= form.text_area :functionE2, :rows => 1 %><br>
+      <strong>COREN/SC:</strong><br>
+      <%= form.text_area :corenE2, :rows => 1 %><br>
+    </div>
+  </div><br>
 
-    <strong>Revisado por:</strong><br>
-    <%= form.text_area :revisado, :cols => 70, :rows => 1 %><br>
-    <strong>Função/Cargo:</strong><br>
-    <%= form.text_area :functionR1, :cols => 70, :rows => 1 %><br>
-    <strong>COREN/SC:</strong><br>
-    <%= form.text_area :corenR1, :cols => 20, :rows => 1 %><br><br>
+  <div class="campo2">
+    <div class="textarea1">
+      <b><%= form.label :"Documento revisado por:", 
+      style: "position: relative; left: 3px; font-size: 18px; color: black;" %></b><br><br>
+      <strong>Nome Completo:</strong><br>
+      <%= form.text_area :revisado, :rows => 1 %><br>
+      <strong>Função/Cargo:</strong><br>
+      <%= form.text_area :functionR1, :rows => 1 %><br>
+      <strong>COREN/SC:</strong><br>
+      <%= form.text_area :corenR1, :rows => 1 %><br>
+    </div>
+  </div><br>
 
-    <strong>Formatado por:</strong><br>
-    <%= form.text_area :formatado, :cols => 70, :rows => 1 %><br>
-    <strong>Função/Cargo:</strong><br>
-    <%= form.text_area :functionF1, :cols => 70, :rows => 1 %><br>
-    <strong>COREN/SC:</strong><br>
-    <%= form.text_area :corenF1, :cols => 20, :rows => 1 %><br><br>
+  <div class="campo2">
+    <div class="textarea1">
+      <b><%= form.label :"Documento formatado por:", 
+      style: "position: relative; left: 3px; font-size: 18px; color: black;" %></b><br><br>
+      <strong>Nome Completo:</strong><br>
+      <%= form.text_area :formatado, :rows => 1 %><br>
+      <strong>Função/Cargo:</strong><br>
+      <%= form.text_area :functionF1, :rows => 1 %><br>
+      <strong>COREN/SC:</strong><br>
+      <%= form.text_area :corenF1, :rows => 1 %><br>
+    </div>
+  </div><br>
 
-    <strong>Validado por:</strong><br>
-    <%= form.text_area :validado1, :cols => 70, :rows => 1 %><br>
-    <strong>Função/Cargo:</strong><br>
-    <%= form.text_area :functionV1, :cols => 70, :rows => 1 %><br>
-    <strong>COREN/SC:</strong><br>
-    <%= form.text_area :corenV1, :cols => 20, :rows => 1 %><br><br>
+  <div class="campo2">
+    <div class="textarea1">
+      <b><%= form.label :"Documento validado por:", 
+      style: "position: relative; left: 3px; font-size: 18px; color: black;" %></b><br><br>
+      <strong>Nome Completo:</strong><br>
+      <%= form.text_area :validado1, :rows => 1 %><br>
+      <strong>Função/Cargo:</strong><br>
+      <%= form.text_area :functionV1, :rows => 1 %><br>
+      <strong>COREN/SC:</strong><br>
+      <%= form.text_area :corenV1, :rows => 1 %><br><br>
 
-    <strong>Validado por:</strong><br>
-    <%= form.text_area :validado2, :cols => 70, :rows => 1 %><br>
-    <strong>Função/Cargo:</strong><br>
-    <%= form.text_area :functionV2, :cols => 70, :rows => 1 %><br>
-    <strong>COREN/SC:</strong><br>
-    <%= form.text_area :corenV2, :cols => 20, :rows => 1 %><br><br>
+      <strong>Nome Completo:</strong><br>
+      <%= form.text_area :validado2, :rows => 1 %><br>
+      <strong>Função/Cargo:</strong><br>
+      <%= form.text_area :functionV2, :rows => 1 %><br>
+      <strong>COREN/SC:</strong><br>
+      <%= form.text_area :corenV2, :rows => 1 %><br>
+    </div>
+  </div><br>
 
-    <strong>Aprovado por:</strong><br>
-    <%= form.text_area :aprovado, :cols => 70, :rows => 1 %><br>
-    <strong>Função/Cargo:</strong><br>
-    <%= form.text_area :functionA1, :cols => 70, :rows => 1 %><br>
-    <strong>COREN/SC:</strong><br>
-    <%= form.text_area :corenA1, :cols => 20, :rows => 1 %>
-  </p>
+  <div class="campo2">
+    <div class="textarea1">
+      <b><%= form.label :"Documento aprovado por:", 
+      style: "position: relative; left: 3px; font-size: 18px; color: black;" %></b><br><br>
+      <strong>Nome Completo:</strong><br>
+      <%= form.text_area :aprovado, :rows => 1 %><br>
+      <strong>Função/Cargo:</strong><br>
+      <%= form.text_area :functionA1, :rows => 1 %><br>
+      <strong>COREN/SC:</strong><br>
+      <%= form.text_area :corenA1, :rows => 1 %>
+    </div>
+  </div><br>
 
-  <p class="date">
-    <strong>Data de Aprovação:</strong><br>
+  <div class="date">
+    <strong>Data de Aprovação:</strong>
+    <b><%= form.label :"*a data de aprovação deve ser anterior a data de implementação!!!", 
+      style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
     <%= form.label :"Dia/Mês/Ano:", style: "display: block" %>
     <%= form.select :day_approval, ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
     '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '21', '23', '24', 
@@ -153,19 +196,18 @@
 
     <br><br><strong>Data de Implementação:</strong><br>
     <%= form.label :"Dia/Mês/Ano:", style: "display: block" %>
-
     <%= form.select :day_implement, ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
     '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '21', '23', '24', 
     '25', '26', '27', '28', '29', '30', '31'] %>
-    
     <%= form.select :month_implement, ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
     '11', '12'] %>
-
     <%= form.select :year_implement, ['-', '2018', '2019', '2020', '2021', '2022', '2023', '2024'] %>
-  </p>
+  </div><br>
 
-  <p class="date2">
-    <strong>Data de Elaboração:</strong><br>
+  <div class="date2">
+    <strong>Data de Elaboração:</strong>
+    <b><%= form.label :"*observe com atenção os prazos para as próximas revisões!!!", 
+      style: "position: relative; left: 7px; font-size: 14px; color: red;" %></b>
     <%= form.label :"Dia/Mês/Ano:", style: "display: block" %>
     <%= form.select :date_day_elaboration, ['-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 
     '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '21', '23', '24', '25', '26', 
@@ -192,8 +234,7 @@
     '11', '12'] %>
     <%= form.select :date_year_next_revision, ['-', '2018', '2019', '2020', '2021', '2022', '2023', 
     '2024', '2025'] %>
-
-  </p>
+  </div><br>
 
   <div class="strong2">
     <%= form.submit 'SALVAR', :class => "button" %>

@@ -35,6 +35,15 @@ textarea {
   resize: none;
 }
 
+/* botões salvar e cancelar */
+div.strong2{
+  font-size: 18px;
+  font-family: cambria; 
+  color: #000000;
+  padding: 3px;
+  margin-left: 77px;
+}
+
 /* posição dos botões MENU PRINCIPAL e CRIAR NOVO USUÁRIO da página USUÁRIOS CADASTRADOS */
 div.strong3{ 
   font-size: 18px;
@@ -43,14 +52,16 @@ div.strong3{
   margin-bottom: 2px;
 }
 
+/* botões salvar e cancelar */
+
 /* visualizar usuário */
 div.strong5{
   margin-top: 12px;
   margin-left: 77px;
   width: 86%;
-  height: 375px;
+  height: 300px;
   border-style: groove; 
-  padding: 25px;
+  padding: 15px;
   vertical-align: center;
   font-size: 18px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -68,13 +79,8 @@ div.position2{
 div.position3{
   margin-top: 8px;
   margin-left: 77px;
+  display: flex;
+  justify-content: flex-start; /* Alinha os botões à esquerda */
+  gap: 5px;
 }
 
-/* botões salvar e cancelar */
-div.strong2{
-  font-size: 18px;
-  font-family: cambria; 
-  color: #000000;
-  padding: 3px;
-  margin-left: 77px;
-}

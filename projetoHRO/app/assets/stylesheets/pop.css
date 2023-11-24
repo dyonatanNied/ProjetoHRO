@@ -1,5 +1,5 @@
 /* primeiro campo do formulário de POP */
-p.campo1 {
+div.campo1 {
   margin-left: 57px;
   width: 86%;
   height: auto;
@@ -12,7 +12,7 @@ p.campo1 {
 
 
 /* segundo campo do formulário de POP */
-p.campo2 {
+div.campo2 {
   margin-left: 57px;
   width: 86%;
   height: auto;
@@ -24,7 +24,7 @@ p.campo2 {
 }
 
 /* campo datas de aprovação e implementação */
-p.date {
+div.date {
   margin-left: 57px;
   width: 86%;
   height: auto;
@@ -36,7 +36,7 @@ p.date {
 }
 
 /* campo datas de elaboração, ultima revisão e próxima revisão */
-p.date2 {
+div.date2 {
   margin-left: 57px;
   width: 86%;
   height: auto;
@@ -71,7 +71,21 @@ textarea {
   font-size: 15px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   resize: none;
-  width: 100%;
+  width: 60%;
+}
+
+#textarea1 {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  margin-top: 2px;
+  background-color: #ecf2f5;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  resize: none;
+  width: 30%;
 }
 
 /* posição dos botões MENU PRINCIPAL da página LISTA DE POP*/
@@ -100,6 +114,9 @@ div.position{
   margin-top: 1px;
   margin-left: 77px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start; /* Alinha os botões à esquerda */
+  gap: 5px;
 }
 
 /* posição botão deletar */ 

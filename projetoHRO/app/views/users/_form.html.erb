@@ -18,6 +18,9 @@
     <%= form.label :"Nome Completo:", style: "display: block" %>
     <%= form.text_area :name, :cols => 80, :rows => 1 %><br>
 
+    <%= form.label :"Email:", style: "display: block" %>
+    <%= form.text_area :email, :cols => 80, :rows => 1 %><br>
+
     <%= form.label :"Setor:", style: "display: block" %>
     <%= form.text_area :sector, :cols => 45, :rows => 1 %><br>
 
@@ -46,13 +49,6 @@
     <%= form.select :state, ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 
     'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'] %><br>
     <br>
-  
-  </p>
-
-  <p class="campo4">
-    <%= form.label :"Cadastre uma senha!!!", style: "display: block" %><br>
-
-    
   </p>
 
   <div class="strong2">

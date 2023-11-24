@@ -1,0 +1,40 @@
+div.field1{
+    margin-top: 12px;
+    margin-left: 77px;
+    margin-bottom: 12px;
+    width: 86%;
+    height: 230px;
+    border-style: groove;
+    padding: 25px;
+    vertical-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.field2{
+    margin-top: 12px;
+    margin-left: 77px;
+    margin-bottom: 12px;
+    width: 86%;
+    height: 185px;
+    border-style: groove;
+    padding: 25px;
+    vertical-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.custom-input {
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    background-color: #ecf2f5;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    resize: none;
+    width: 60%;
+}
+
+div.buttonPosition{
+    margin-left: 77px;
+}
