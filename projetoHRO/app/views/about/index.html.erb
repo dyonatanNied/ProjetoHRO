@@ -1,4 +1,6 @@
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "button" %>
+<!-- header -->
 <%= render 'shared/header' %>
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
@@ -6,13 +8,15 @@
   </div>
 </div>
 
+<!-- botão voltar -->
 <div class="default_position">
   <%= link_to "VOLTAR", inicial_path, :class => "button", :style => "margin-left: 150px" %>
 </div>
 
+<!-- descrição do sistema -->
 <pre class="borda">
-    Este sistema foi desenvolvido pela Universidade Comunitária da Região de Chapecó - UNOCHAPECÓ
-    em parceria com o Hospital Regional do Oeste - HRO.
+    Este sistema foi desenvolvido pela Universidade Comunitária da Região de Chapecó - UNOCHAPECÓ em 
+    parceria com o Hospital Regional do Oeste - HRO.
 
     Desenvolvedor:
     - Dyonatan Nied
@@ -23,4 +27,5 @@
     - Radamés Pereira
 </pre>
 
+<!-- footer -->
 <%= render 'shared/footer' %>

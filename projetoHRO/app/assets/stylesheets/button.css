@@ -15,8 +15,9 @@
     border-radius: 15px;
     box-shadow: 0 4px #516da0;
   }
-  
-  .button:hover { /* mudança de cor quando coloca o cursor sobre o botão */
+
+  /* hover: faz a mudança de cor quando coloca o cursor sobre o botão */
+  .button:hover {
     background-color: #3268cc
   } 
   

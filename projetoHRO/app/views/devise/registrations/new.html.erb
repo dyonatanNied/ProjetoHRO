@@ -1,4 +1,6 @@
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "create_account" %>
+<!-- header -->
 <%= render 'shared/header' %> 
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
@@ -7,14 +9,17 @@
   </div>
 </div>
 
+<!-- criar nova conta utilizando devise -->
 <div class="field1">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
+    <!-- campo e-mail, inserção e verificação se o e-mail é valido -->
     <div class="field">
       <%= f.label :"E-mail" %>
       <br><%= f.text_area :email, autofocus: true, autocomplete: "email", :rows => 1 %>
     </div>
 
+    <!-- campo senha, verifica se a quantidade de caracteres mínimos foi digitada pelo usuário -->
     <div class="field">
       <%= f.label :Senha %>
       <% if @minimum_password_length %>
@@ -23,11 +28,13 @@
       <%= f.password_field :password, autocomplete: "new-password", class: "custom-input" %>
     </div>
 
+    <!-- campo confimação de senha -->
     <div class="field">
       <%= f.label :Confirme_a_senha %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "custom-input" %>
     </div><br>
 
+    <!-- botões salvar e cancelar -->
     <div class="actions">
       <%= f.submit "SALVAR", :class => "button" %>
       <%= link_to "CANCELAR", new_user_session_path, :class => "button" %>
@@ -35,4 +42,5 @@
   <% end %>
 </div>
 
+<!-- mensagem de erro padrão do devise -->
 <%= render "devise/shared/error_messages", resource: resource %>

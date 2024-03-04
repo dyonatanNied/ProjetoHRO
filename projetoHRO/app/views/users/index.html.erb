@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<!-- script para recarregar a página ao acessa-lá -->
 <script>
   // Verifique se o parâmetro "reload" está presente na URL
   const urlParams = new URLSearchParams(window.location.search);
@@ -12,8 +13,11 @@
 </script>
 
 <html lang="en" class="antialiased">
-	<p style="color: green"><%= notice %></p> <! mensagem de sucesso quando salva o pop> 
+	<!-- mensagem quando salva com sucesso -->
+	<p style="color: green"><%= notice %></p>
+	<!-- link tag referente aos arquivos css -->
 	<%= stylesheet_link_tag "button", "user", "table" %>
+	<!-- header -->
 	<%= render 'shared/header' %> 
 	<div class="row-fluid">
 		<div class="span4" style="padding: 1%; background-color: #ffffff;">
@@ -28,6 +32,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
+		<!-- links tailwind e jquery para a tabela abaixo -->
 		<link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel=" stylesheet">
 		<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
 		<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
@@ -37,6 +42,7 @@
 		<%= link_to "VOLTAR", inicial_path, :class => "button" %>
 	</div>
 
+	<!-- tabela mostrando os usuários cadastrados -->
 	<body>
 		<div style="margin-left:40px; margin-top: 15px;">
 			<div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
@@ -67,6 +73,7 @@
 			</div>
 		</div><br><br>
 
+		<!-- script referente à tabela acima -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>

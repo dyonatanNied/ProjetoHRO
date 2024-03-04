@@ -1,55 +1,62 @@
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "button", "pop", "show_pop", "no_footer", "application", "view_pop" %>
+
+<!-- tag javascript referente ao editor de texto Ckeditor, NÃO MEXER PORQUE PARA DE FUNCIONAR -->
 <%= javascript_include_tag Ckeditor.cdn_url %>
+
 <div id="<%= dom_id pop %>">
 <br>
 
+<!-- css do formulário, o css deve ficar aqui junto ao código até implementar a função de impressão -->
+<!-- porque ao remover o css a página fica sem formatação ao tentar imprimir usando o CTRL + P -->
 <style>
   div.box1{
-      margin-left: 77px;
-      width: 84%;
-      border-style: groove;
-      padding: 25px;
-      font-size: 17px;
-      vertical-align: center;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
+    margin-left: 77px;
+    width: 84%;
+    border-style: groove;
+    padding: 25px;
+    font-size: 17px;
+    vertical-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
 
   div.box2{
-      margin-left: 77px;
-      width: 86%;
-      border-style: groove;
-      font-size: 15px;
-      padding: 12px;
-      vertical-align: center;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      word-wrap: break-word;
-    }
+    margin-left: 77px;
+    width: 86%;
+    border-style: groove;
+    font-size: 15px;
+    padding: 12px;
+    vertical-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-wrap: break-word;
+  }
 
   div.box3{
-      margin: 10px;
-      margin-left: 77px;
-      width: 86%;
-      border-style: groove;
-      padding: 12px;
-      font-size: 15px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      word-wrap: break-word;
-      vertical-align: center;
-    }
+    margin: 10px;
+    margin-left: 77px;
+    width: 86%;
+    border-style: groove;
+    padding: 12px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-wrap: break-word;
+    vertical-align: center;
+  }
 
   div.box4{
-      margin: 10px;
-      margin-left: 77px;
-      width: 86%;
-      border-style: groove;
-      padding: 12px;
-      font-size: 15px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      word-wrap: break-word;
-      vertical-align: center;
+    margin: 10px;
+    margin-left: 77px;
+    width: 86%;
+    border-style: groove;
+    padding: 12px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-wrap: break-word;
+    vertical-align: center;
   }
 </style>
 
+<!-- formulário pop -->
 <div class="box1">
   <b>Número do POP:</b>
   <%= pop.pop_number %>
@@ -172,6 +179,7 @@
   <%= raw pop.anexos %>
 </div>
 
+<!-- campos de assinaturas -->
 <div class="box4">
   <b>Elaborado:</b><br>
   <br><%= pop.elaborado1 %><br><%= pop.functionE1 %><br>
