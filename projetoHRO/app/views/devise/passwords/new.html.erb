@@ -1,5 +1,7 @@
+<!-- link tag para os arquivos css utilizados -->
 <%= stylesheet_link_tag "create_account" %>
-<%= render 'shared/header' %> 
+<!-- header -->
+<%= render 'shared/header' %>
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
     <br><b><p style="margin-top: 150x; text-align: center; font-size: 24px; font-family: cambria; 
@@ -7,6 +9,7 @@
   </div>
 </div>
 
+<!-- formulário para trocar a senha -->
 <div class="field2">
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>

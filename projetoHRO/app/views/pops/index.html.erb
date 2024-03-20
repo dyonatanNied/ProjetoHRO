@@ -2,7 +2,9 @@
 <html lang="en" class="antialiased">
 <p style="color: green"><%= notice %> <! mensagem de sucesso quando salva o pop>
 
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "button", "pop", "table" %>
+<!-- header -->
 <%= render 'shared/header' %> 
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
@@ -11,6 +13,7 @@
   </div>
 </div>
 
+<!-- script para recarregar a página ao acessa-lá -->
 <script>
   // Verifique se o parâmetro "reload" está presente na URL
   const urlParams = new URLSearchParams(window.location.search);
@@ -47,7 +50,7 @@
 	<link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel=" stylesheet">
 	<!--Regular Datatables CSS-->
 	<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
-	<!--Responsive Extension Datatables CSS-->
+	<!--extensão da responsividade Datatables CSS-->
 	<link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
 </head>
 
@@ -55,6 +58,7 @@
   <%= link_to "VOLTAR", inicial_path, :class => "button" %><br>
 </div>
 
+<!-- tabela exibindo todos os Pop's cadastrados -->
 <body>
 	<div style="margin-left:40px; margin-top: 15px;">
 		<div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">

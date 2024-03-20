@@ -1,3 +1,4 @@
+/* no_footer é utilizado para evitar que o footer seja exibido em páginas específicas, exemplo: login */
 footer{
     display: none;
 }

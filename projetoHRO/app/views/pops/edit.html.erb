@@ -1,11 +1,17 @@
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "button", "pop" %>
+<!-- header -->
 <%= render 'shared/header' %>
+<!-- tag javascript referente ao editor de texto Ckeditor, NÃO MEXER PORQUE PARA DE FUNCIONAR -->
 <%= javascript_include_tag Ckeditor.cdn_url %>
+
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
-    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; text-decoration: underline;"><big>Editar Procedimento Operacional Padrão</big></p></b>
+    <b><p style="text-align: center; font-size: 24px; font-family: cambria; color: #3268cc; 
+      text-decoration: underline;"><big>Editar Procedimento Operacional Padrão</big></p></b>
   </div>
 </div>
 
+<!-- renderiza o pop -->
 <%= render "form", pop: @pop %>
 <br><br>

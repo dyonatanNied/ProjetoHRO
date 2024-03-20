@@ -1,5 +1,8 @@
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "button" %>
+<!-- mensagem exibida ao salvar -->
 <p style="color: green"><%= notice %></p>
+<!-- header -->
 <%= render 'shared/header' %>
 
 <div class="row-fluid">
@@ -8,5 +11,6 @@
   </div>
 </div>
 
+<!-- renderiza o fomulário de usuário -->
 <%= render "form", user: @user %>
 

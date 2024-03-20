@@ -74,6 +74,7 @@ textarea {
   width: 60%;
 }
 
+/* campo de texto do formulário */
 #textarea1 {
   padding: 5px;
   box-sizing: border-box;

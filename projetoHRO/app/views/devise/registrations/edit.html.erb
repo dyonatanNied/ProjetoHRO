@@ -1,4 +1,6 @@
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "button", "edit_user" %>
+<!-- header -->
 <%= render 'shared/header' %>
 <div class="row-fluid">
   <div class="span4" style="padding: 1%; background-color: #ffffff;">
@@ -7,10 +9,12 @@
   </div>
 </div>
 
+<!-- botão voltar -->
 <div class="buttonPosition">
   <%= link_to "VOLTAR", inicial_path, :class => "button"  %>
 </div>
 
+<!-- edição de usuários -->
 <div class="editUser2">
   <b><p style="position: relative; left: 7px; color: red; font-size: 12px;">
   <big>*Atenção!!! Para alterar os dados pessoais entre em contato com o setor responsável!</big></p></b><br>
@@ -35,8 +39,10 @@
   </div>
 </div>
 
+<!-- alteração de senha e e-mail, é necessário informar a senha atual para altera dados -->
 <div class="editUser">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <!-- mensagem de erro padrãodo devise -->
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <b><%= f.label :"*Deixe em BRANCO caso não queira alterar algum campo!!!", 
@@ -75,6 +81,7 @@
   <% end %>
 </div>
 
+<!-- cancelar conta, função padrão do devise -->
 <div class="cancel">
   <strong>Deseja deletar a conta?</strong><br><br>
   <div>

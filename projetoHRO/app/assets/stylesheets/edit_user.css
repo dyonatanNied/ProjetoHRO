@@ -1,3 +1,4 @@
+/* Css da página de edição de usuário */
 div.cancel{
     margin-top: 12px;
     margin-bottom: 12px;
@@ -11,7 +12,7 @@ div.cancel{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
   
-  /* visualizar usuário */
+/* campos de senha e e-mail */
 div.editUser{
     margin-top: 12px;
     margin-left: 77px;
@@ -22,6 +23,7 @@ div.editUser{
     vertical-align: center;
 }
 
+/* visualizar usuário */
 div.editUser2{
     margin-top: 12px;
     margin-left: 77px;
@@ -34,11 +36,13 @@ div.editUser2{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* campo de texto */
 div.editText{
     font-size: 17px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* posição do botão VOLTAR */
 div.buttonPosition{
     margin-left: 77px;
 }

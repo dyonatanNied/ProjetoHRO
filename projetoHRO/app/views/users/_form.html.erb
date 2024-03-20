@@ -1,3 +1,4 @@
+<!-- link tag referente aos arquivos css -->
 <%= stylesheet_link_tag "button", "user" %>
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
@@ -11,6 +12,7 @@
     </div>
   <% end %>
 
+  <!-- formulário de usuário -->
   <p class="campo3">
     <b><%= form.label :"Atenção: preencha todas as informações abaixo!!!", 
     style: "position: relative; left: 7px; font-size: 15px; color: red;" %></b><br><br>
